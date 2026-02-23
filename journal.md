@@ -1,46 +1,150 @@
-20 février 2026 (cours 1)
+# Journal - TP01 - Gestionnaire de produits
 
-Durant cette séance, j'ai regardé la vidéo complète explicative du TP1.
+> **Cours :** 420-W40-SF - Développement d’applications Web (Cégep de Sainte-Foy)  
+> **Travail :** TP01 - Gestionnaire de produits  
+> **Étudiant(e) :** {{ Tasnime Trabelsi }}
+> **Période :** {{ AAAA-MM-JJ }} → {{ AAAA-MM-JJ }}
 
-Après avoir relu l'énoncé du TP1, j'ai commencé par créer mon repository sur GitHub que j'ai ensuite cloné parmi mes fichiers tp01.
+---
 
-J'ai fait l'installation complète du nouveau projet Vue, l'installation Bootstrap de la manière vue en classe et
+## Consignes
+Pour **chaque séance**, écrire **8 à 10 lignes** (minimum) qui incluent :
+- ce que j’ai fait (concret, vérifiable)
+- les difficultés / erreurs rencontrées
+- comment j’ai résolu (ou tenté de résoudre)
 
-j'ai fait un commit après chaque étape avec un message précisant mon intention.
+> **IMPORTANT** : écrire en fin de séance pendant que c’est frais.
+> **IMPORTANT** : renommer ce fichier backlog.md
 
-Par contre, ce qui m'a fait perdre un peu de temps vers la moitié de la séance c'est quand j'ai voulu re-arranger l'emplacement de mon app
+---
 
-mais ça a causé quelques problèmes car j'ai cloné mon app à l'intérieur de la même app de base que je voulais déplacer.
+## Séance 1 — _2026-02-20_ (Durée : _1h50m_)
+**Objectif de la séance :**  
+- Initialiser le projet et mettre en place les fichiers de base._
 
-Alors j'ai supprimé le dossier et cloné de nouveau mon repository dans le bon dossier que je voulais.
+**Travail réalisé (8–10 lignes min)**  
+- Durant cette séance, j'ai regardé la vidéo complète explicative du TP1.
+- Après avoir relu l'énoncé du TP1, j'ai commencé par créer mon repository sur GitHub que j'ai ensuite cloné parmi mes fichiers tp01.
+- J'ai fait l'installation complète du nouveau projet Vue, l'installation Bootstrap de la manière vue en classe et
+- j'ai fait un commit après chaque étape avec un message précisant mon intention.
+- Par contre, ce qui m'a fait perdre un peu de temps vers la moitié de la séance c'est quand j'ai voulu re-arranger l'emplacement de mon app
+- mais ça a causé quelques problèmes car j'ai cloné mon app à l'intérieur de la même app de base que je voulais déplacer.
+- Alors j'ai supprimé le dossier et cloné de nouveau mon repository dans le bon dossier que je voulais.
+- Pour terminer, j'ai créer un fichier backlog et j'analyse les récits utilisateurs afin de pouvoir faire la liste des étapes et savoir comment décortiquer les composantes à la prochaine séance.
+- Au prochain cours, je vais compléter le backlog, implémenter mon idée de produit et commencer la mise en place du formulaire
+- d'ajouts de produits et la page d'affichage des produits.
 
-Pour terminer, j'ai créer un fichier backlog et j'analyse les récits utilisateurs afin de pouvoir faire la liste des étapes et savoir comment décortiquer les composantes à la prochaine séance.
+**Difficultés / bugs**  
+- Erreur de clonage repository git_  
+- Problème de style import fichier... J'ai mal importé mon fichier style.css dans main.ts et ça m'a pris un moment pour trouver la cause_
 
-Au prochain cours, je vais compléter le backlog, implémenter mon idée de produit et commencer la mise en place du formulaire
+**Solutions / pistes testées**  
+- _J’ai supprimer le clône et refait à nouveau_  
+- _J’ai corriger le chemin d'import du fichier de style_
 
-d'ajouts de produits et la page d'affichage des produits. 
+---
+
+## Séance 2 — _AAAA-MM-JJ_ (Durée : _XhYm_)
+**Objectif de la séance :**  
+…
+
+**Travail réalisé (8–10 lignes min)**  
+- …
+- …
+- …
+- …
+- …
+- …
+- …
+- …
+- …
+
+**Difficultés / bugs**  
+- …
+
+**Solutions / pistes testées**  
+- …
+
+---
+
+## Séance 3 — _AAAA-MM-JJ_ (Durée : _XhYm_)
+**Objectif de la séance :**  
+…
+
+**Travail réalisé (8–10 lignes min)**  
+- …
+- …
+- …
+- …
+- …
+- …
+- …
+- …
+- …
+
+**Difficultés / bugs**  
+- …
+
+**Solutions / pistes testées**  
+- …
+
+---
+
+## Séance 4 — _AAAA-MM-JJ_ (Durée : _XhYm_)
+**Objectif de la séance :**  
+…
+
+**Travail réalisé (8–10 lignes min)**  
+- …
+- …
+- …
+- …
+- …
+- …
+- …
+- …
+- …
+
+**Difficultés / bugs**  
+- …
+
+**Solutions / pistes testées**  
+- …
 
 
+---
+
+## Séance 5 — _AAAA-MM-JJ_ (Durée : _XhYm_)
+**Objectif de la séance :**  
+…
+
+**Travail réalisé (8–10 lignes min)**  
+- …
+- …
+- …
+- …
+- …
+- …
+- …
+- …
+- …
+
+**Difficultés / bugs**  
+- …
+
+**Solutions / pistes testées**  
+- …
 
 
+---
 
-24 février 2026 (cours 2)
+## Résumé global (à compléter avant remise)
+- **Ce dont je suis le plus fier/fière :** …
+- **Ce que j’améliorerais avec plus de temps :** …
+- **3 apprentissages techniques :**  
+  1) …  
+  2) …  
+  3) …
 
-
-
-
-
-
-
-27 février 2026 (cours 3)
-
-
-
-
-
-
-
-
-
-3 mars 2026 (cours 4)
+---
 
