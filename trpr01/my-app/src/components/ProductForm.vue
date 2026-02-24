@@ -1,12 +1,7 @@
 <script setup lang="ts">
-import { reactive, ref } from 'vue'
-
-interface Product {
-    name: string
-    price: number
-    description: string
-    stock: number
-}
+import { reactive } from 'vue'
+import { products } from '../products'
+import type { Product } from '../products'
 
 interface ProductForm {
     name: string
@@ -21,8 +16,6 @@ const form = reactive<ProductForm>({
     description: '',
     stock: ''
 })
-
-const products = ref<Product[]>([])
 
 function createProduct(): Product {
     return {
@@ -56,12 +49,12 @@ function resetForm(): void {
         <button type="submit">Ajouter</button>
     </form>
 
-    <div v-for="product in products" :key="product.name">
+    <!--<div v-for="product in products" :key="product.name">
         <h3>Nom: {{ product.name }}</h3>
         <p>Prix: {{ product.price }} $</p>
         <p>Description: {{ product.description }}</p>
         <p>Stock: {{ product.stock }}</p>
-    </div>
+    </div>-->
 </template>
 
 <style scoped>
