@@ -1,9 +1,14 @@
 <script setup lang="ts">
 import ProductTable from './components/ProductTable.vue'
+import ProductForm from './components/ProductForm.vue'
 </script>
 
 <template>
+  <div class="container">
   <ProductTable />
+    <hr />
+  <ProductForm />
+  </div>
 </template>
 
 <style scoped>
