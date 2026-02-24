@@ -31,22 +31,23 @@
 |  ID | Priorité | Statut | Titre (tâche) | Relié à (RU#) | Critères d’acceptation (définition de done) | Notes / obstacles |
 | --: | :------: | :----: | ------------- | :-----------: | ------------------------------------------- | ----------------- |
 |  A1 |   MUST   |   ⬜   | Tableau des produits |  5     | Page affichage sous forme de tableau             | Aucun produit affiché avant ajout par formulaire |
-|  A2 |   MUST   |   ⬜   | Formulaire ajout produit |  1 | Champs formulaire-> nom, description, prix et stock |            |
-|  A3 |   MUST   |   ⬜   | Bouton ajout produit| 1       | Bouton "Ajouter" cliquable sous le formulaire |                 |
-|  A4 |  SHOULD  |   ⬜   | Validation au clic bouton | 1 | Formulaire non envoyé si données manquantes |                   |
-|  A5 |   MUST   |   ⬜   | Logique applicative |    1    | Produit ajouté par formulaire s'affiche dans la page d'affichage des produits |                   |
-|  A6 |   MUST   |   ⬜   | Bouton modification produit |2| Nouveau bouton "Modifier" cliquable sous le produit sélectionné |        |
-|  A7 |   MUST   |   ⬜   | Formulaire préremplit |   2   | Nouveau formulaire généré prérempli par les données du produit sélectionné |        |
-|  A8 |   MUST   |   ⬜   | Bouton duplication produit |3 | Nouveau bouton "Dupliquer" cliquable sous le produit sélectionné |        |
-|  A9 |   MUST   |   ⬜   | Formulaire préremplit |   3   | Nouveau formulaire généré prérempli par les données du produit sélectionné, sauf l'id |        |
-|  A10|   MUST   |   ⬜   | Nouveau Id généré |     3     | Nouveau Id généré->unique |        |
-|  A11|   MUST   |   ⬜   | Bouton supression produit | 4 | Nouveau bouton "Supprimer" cliquable sous le produit sélectionné | 
-|  A12|   MUST   |   ⬜   | Confirmation suppression |  4 | Texte colorié s'affiche un moment confirmant clairement la supression du produit |        |
-|  A13|   MUST   |   ⬜   | Recherche produits |     6    | Champs de recherche de produits à la page affichage produits |        |
-|  A14|   MUST   |   ⬜   | Recherche dynamique |    6    | Résultats sont mise à jour instantannément à la recherche |        | 
-|  A15|   MUST   |   ⬜   | Détails produits |     7      | Champs détails-> nom, description, prix et stock |        | <
-|  A16|  COULD   |   ⬜   | Retour en arrière |     7     | Bouton ou lien retour pour sortir des détails d'un produit spécifique |        |
-|  A17|   MUST   |   ⬜   | Affichage quantités |    8    | Affichage en temps réel des quantités avec indicateur visuel (plus en stock -> rouge)|        | 
-|  A18|   MUST   |   ⬜   | Avertissement rupture stock |9| Texte colorié s'affiche si produit atteint stock critique (>=3) |        | 
-|  A19|   MUST   |   ⬜   | Bouton téléchargement CSV | 10| Nouveau bouton "Télécharger" / "Exporter" dans la page d'affichage des produits |        | 
-|  A20|   MUST   |   ⬜   | Exporter UI liste en CSV | 10 | UI liste produits se télécharge en format CSV |    qu'est-ce que CSV et comment ça marche?    | 
+|  A2 |   MUST   |   ⬜   | Affichage produits |    5     | Tableau affiche nom produit, lien vers détails et options (boutons) | Rien encore à afficher dans le tableau, boutons créés plus tard |
+|  A3 |   MUST   |   ⬜   | Formulaire ajout produit |  1 | Champs formulaire-> nom, description, prix et stock |            |
+|  A4 |   MUST   |   ⬜   | Bouton ajout produit| 1       | Bouton "Ajouter" cliquable sous le formulaire |                 |
+|  A5 |  SHOULD  |   ⬜   | Validation au clic bouton | 1 | Formulaire non envoyé si données manquantes |                   |
+|  A6 |   MUST   |   ⬜   | Logique applicative |    1    | Produit ajouté par formulaire s'affiche dans la page d'affichage des produits | Doit s'afficher maintenant dans page produit |
+|  A7 |   MUST   |   ⬜   | Bouton modification produit |2| Nouveau bouton "Modifier" cliquable sous le produit sélectionné |        |
+|  A8 |   MUST   |   ⬜   | Formulaire préremplit |   2   | Nouveau formulaire généré prérempli par les données du produit sélectionné |        |
+|  A9 |   MUST   |   ⬜   | Bouton duplication produit |3 | Nouveau bouton "Dupliquer" cliquable sous le produit sélectionné |        |
+|  A10|   MUST   |   ⬜   | Formulaire préremplit |   3   | Nouveau formulaire généré prérempli par les données du produit sélectionné, sauf l'id |        |
+|  A11|   MUST   |   ⬜   | Nouveau Id généré |     3     | Nouveau Id généré->unique |        |
+|  A12|   MUST   |   ⬜   | Bouton supression produit | 4 | Nouveau bouton "Supprimer" cliquable sous le produit sélectionné | 
+|  A13|   MUST   |   ⬜   | Confirmation suppression |  4 | Texte colorié s'affiche un moment confirmant clairement la supression du produit |        |
+|  A14|   MUST   |   ⬜   | Recherche produits |     6    | Champs de recherche de produits à la page affichage produits |        |
+|  A15|   MUST   |   ⬜   | Recherche dynamique |    6    | Résultats sont mise à jour instantannément à la recherche |        | 
+|  A16|   MUST   |   ⬜   | Détails produits |     7      | Champs détails-> nom, description, prix et stock |        | <
+|  A17|  COULD   |   ⬜   | Retour en arrière |     7     | Bouton ou lien retour pour sortir des détails d'un produit spécifique |        |
+|  A18|   MUST   |   ⬜   | Affichage quantités |    8    | Affichage en temps réel des quantités avec indicateur visuel (plus en stock -> rouge)|        | 
+|  A19|   MUST   |   ⬜   | Avertissement rupture stock |9| Texte colorié s'affiche si produit atteint stock critique (>=3) |        | 
+|  A20|   MUST   |   ⬜   | Bouton téléchargement CSV | 10| Nouveau bouton "Télécharger" / "Exporter" dans la page d'affichage des produits |        | 
+|  A21|   MUST   |   ⬜   | Exporter UI liste en CSV | 10 | UI liste produits se télécharge en format CSV |    qu'est-ce que CSV et comment ça marche?    | 

@@ -1,4 +1,10 @@
 <template>
+    <h1>Produits</h1>
     <table>
+        <tr>
+            <th>Nom</th>
+            <th>Détails</th>
+            <th>Options</th>
+        </tr>
     </table>
 </template>
