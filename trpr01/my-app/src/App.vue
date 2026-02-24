@@ -4,10 +4,12 @@ import ProductForm from './components/ProductForm.vue'
 </script>
 
 <template>
-  <div class="container">
-  <ProductTable />
-    <hr />
-  <ProductForm />
+  <div>
+    <ProductTable />
+  </div>
+  <hr />
+  <div>
+    <ProductForm />
   </div>
 </template>
 
@@ -23,5 +25,8 @@ import ProductForm from './components/ProductForm.vue'
 }
 .logo.vue:hover {
   filter: drop-shadow(0 0 2em #42b883aa);
+}
+div {
+  margin-bottom: 50px;
 }
 </style>
