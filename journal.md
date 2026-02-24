@@ -3,7 +3,7 @@
 > **Cours :** 420-W40-SF - Développement d’applications Web (Cégep de Sainte-Foy)  
 > **Travail :** TP01 - Gestionnaire de produits  
 > **Étudiant(e) :** {{ Tasnime Trabelsi }}
-> **Période :** {{ AAAA-MM-JJ }} → {{ AAAA-MM-JJ }}
+> **Période :** {{ 2026-02-20 }} → {{ 2026-03-06 }}
 
 ---
 
@@ -20,7 +20,7 @@ Pour **chaque séance**, écrire **8 à 10 lignes** (minimum) qui incluent :
 
 ## Séance 1 — _2026-02-20_ (Durée : _1h50m_)
 **Objectif de la séance :**  
-- Initialiser le projet et mettre en place les fichiers de base._
+Initialiser le projet et mettre en place les fichiers de base._
 
 **Travail réalisé (8–10 lignes min)**  
 - Durant cette séance, j'ai regardé la vidéo complète explicative du TP1.
@@ -44,7 +44,29 @@ Pour **chaque séance**, écrire **8 à 10 lignes** (minimum) qui incluent :
 
 ---
 
-## Séance 2 — _AAAA-MM-JJ_ (Durée : _XhYm_)
+## Séance 2 — _2026-02-24_ (Durée : _1h50m_)
+**Objectif de la séance :**  
+Créer le formulaire qui ajoute effectivement des produits à la table.
+
+**Travail réalisé (8–10 lignes min)**  
+- …Durant cette séance, j'ai mis en place la page d'affichage des produits pour plus tard voir mes résultat.
+- J'ai créé le formulaire des produits avec tous les champs nécessaire pour que ce critère soit acceptée.
+- Mon interface de produits se trouvait de base avec mon formulaire mais j'ai fini par changer cette emplacement.
+- Je l'ai plutôt déplacer vers un autre fichier que j'ai pu ainsi importer là où j'avais besoin des produits comme à la page des produits.
+- Le bouton d'ajout a effectivement ajouté les données du fomulaire parmi la liste des produits donc j'ai pu compléter 4 de mes tâches du backlog. 
+- J'ai vraiment pris mon temps pour les faire mais je suis confiante qu'au prochain cours,
+- je vais pouvoir finir la validation des données et mettre en place tous les boutons(modification, duplication et supression)
+- Le plus grand défi c'était par rapport à comment décortiquer les composantes et le processus à suivre pour que les choses fonctionnent de manière propre.
+
+**Difficultés / bugs**  
+- le découpage de l'application en composantes
+
+**Solutions / pistes testées**  
+- J'ai analysé les récits utilisateurs de mon mieux et j'ai mis du temps pour les ordonner de la manière qui fait du sens pour moi comme la page d'affichage avant le formulaire.
+
+---
+
+## Séance 3 — _2026-02-27_ (Durée : _1h50m_)
 **Objectif de la séance :**  
 …
 
@@ -67,30 +89,7 @@ Pour **chaque séance**, écrire **8 à 10 lignes** (minimum) qui incluent :
 
 ---
 
-## Séance 3 — _AAAA-MM-JJ_ (Durée : _XhYm_)
-**Objectif de la séance :**  
-…
-
-**Travail réalisé (8–10 lignes min)**  
-- …
-- …
-- …
-- …
-- …
-- …
-- …
-- …
-- …
-
-**Difficultés / bugs**  
-- …
-
-**Solutions / pistes testées**  
-- …
-
----
-
-## Séance 4 — _AAAA-MM-JJ_ (Durée : _XhYm_)
+## Séance 4 — _2026-03-03_ (Durée : _1h50m_)
 **Objectif de la séance :**  
 …
 
@@ -114,7 +113,7 @@ Pour **chaque séance**, écrire **8 à 10 lignes** (minimum) qui incluent :
 
 ---
 
-## Séance 5 — _AAAA-MM-JJ_ (Durée : _XhYm_)
+## Séance 5 — _2026-03-06_ (Durée : _1h50m_)
 **Objectif de la séance :**  
 …
 
