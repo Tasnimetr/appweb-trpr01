@@ -30,19 +30,21 @@
 
 |  ID | Priorité | Statut | Titre (tâche) | Relié à (RU#) | Critères d’acceptation (définition de done) | Notes / obstacles |
 | --: | :------: | :----: | ------------- | :-----------: | ------------------------------------------- | ----------------- |
-|  A1 |   MUST   |   ⬜   | Tableau des produits |  5     | Page affichage sous forme de tableau             | Aucun produit affiché avant ajout par formulaire |
-|  A2 |   MUST   |   ⬜   | Affichage produits |    5     | Tableau affiche nom produit, lien vers détails et options (boutons) | Rien encore à afficher dans le tableau, boutons créés plus tard |
-|  A3 |   MUST   |   ⬜   | Formulaire ajout produit |  1 | Champs formulaire-> nom, description, prix et stock |            |
-|  A4 |   MUST   |   ⬜   | Bouton ajout produit| 1       | Bouton "Ajouter" cliquable sous le formulaire |                 |
-|  A5 |  SHOULD  |   ⬜   | Validation au clic bouton | 1 | Formulaire non envoyé si données manquantes |                   |
-|  A6 |   MUST   |   ⬜   | Logique applicative |    1    | Produit ajouté par formulaire s'affiche dans la page d'affichage des produits | Doit s'afficher maintenant dans page produit |
-|  A7 |   MUST   |   ⬜   | Bouton modification produit |2| Nouveau bouton "Modifier" cliquable sous le produit sélectionné |        |
+|  A1 |   MUST   |   ✅   | Tableau des produits |  5     | Page affichage sous forme de tableau             | Aucun produit affiché avant ajout par formulaire |
+|  A2 |   MUST   |   ✅   | Affichage produits |    5     | Tableau affiche nom produit, lien vers détails et options (boutons) | Rien encore à afficher dans le tableau, boutons créés plus tard |
+|  A3 |   MUST   |   ✅   | Formulaire ajout produit |  1 | Champs formulaire-> nom, description, prix et stock |            |
+|  A4 |   MUST   |   ✅   | Bouton ajout produit| 1       | Bouton "Ajouter" cliquable sous le formulaire |                 |
+|  A5 |   MUST   |   ⬜   | Validation au clic bouton | 1 | Formulaire non envoyé si données manquantes |    vérifier input dans ProductForm    |
+|  A6 |   MUST   |   ⬜   | Logique applicative |    1    | Produit **valide** ajouté par formulaire s'affiche dans la page d'affichage des produits | Doit s'afficher maintenant dans page produit |
+|  B1 |  SHOULD  |   ⬜   | Séparer form et table produit|| Séparer la section d'affichage produits et formulaire |   Lien vers autre page pour remplir formulaire?      |
+|  A7 |   MUST   |   ⬜   | Bouton modification produit |2| Nouveau bouton "Modifier" cliquable pour chaque produit |    id devrait être inclu?    |
 |  A8 |   MUST   |   ⬜   | Formulaire préremplit |   2   | Nouveau formulaire généré prérempli par les données du produit sélectionné |        |
-|  A9 |   MUST   |   ⬜   | Bouton duplication produit |3 | Nouveau bouton "Dupliquer" cliquable sous le produit sélectionné |        |
+|  A9 |   MUST   |   ⬜   | Bouton duplication produit |3 | Nouveau bouton "Dupliquer" cliquable pour chaque produit |        |
 |  A10|   MUST   |   ⬜   | Formulaire préremplit |   3   | Nouveau formulaire généré prérempli par les données du produit sélectionné, sauf l'id |        |
-|  A11|   MUST   |   ⬜   | Nouveau Id généré |     3     | Nouveau Id généré->unique |        |
-|  A12|   MUST   |   ⬜   | Bouton supression produit | 4 | Nouveau bouton "Supprimer" cliquable sous le produit sélectionné | 
+|  A11|   MUST   |   ⬜   | Nouveau Id généré |     3     | Nouveau Id généré pour le nouveau produit duppliqué |   Validation id unique   |
+|  A12|   MUST   |   ⬜   | Bouton supression produit | 4 | Nouveau bouton "Supprimer" cliquable pour chaque produit |        |
 |  A13|   MUST   |   ⬜   | Confirmation suppression |  4 | Texte colorié s'affiche un moment confirmant clairement la supression du produit |        |
+|  B2 |  SHOULD  |   ⬜   | Produit supprimé disparaît |4 | Produit ne s'affiche plus parmi la liste table produits |       |
 |  A14|   MUST   |   ⬜   | Recherche produits |     6    | Champs de recherche de produits à la page affichage produits |        |
 |  A15|   MUST   |   ⬜   | Recherche dynamique |    6    | Résultats sont mise à jour instantannément à la recherche |        | 
 |  A16|   MUST   |   ⬜   | Détails produits |     7      | Champs détails-> nom, description, prix et stock |        | <
