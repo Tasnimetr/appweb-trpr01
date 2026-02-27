@@ -34,7 +34,7 @@
 |  A2 |   MUST   |   ✅   | Affichage produits |    5     | Tableau affiche nom produit, lien vers détails et options (boutons) | Rien encore à afficher dans le tableau, boutons créés plus tard |
 |  A3 |   MUST   |   ✅   | Formulaire ajout produit |  1 | Champs formulaire-> nom, description, prix et stock |            |
 |  A4 |   MUST   |   ✅   | Bouton ajout produit| 1       | Bouton "Ajouter" cliquable sous le formulaire |                 |
-|  A5 |   MUST   |   🟦   | Validation au clic bouton | 1 | Formulaire non envoyé si données manquantes |    vérifier input dans ProductForm    |
+|  A5 |   MUST   |   🟥   | Validation au clic bouton | 1 | Formulaire non envoyé si données manquantes | Faire une fonction qui calcule les nombres après la virgules pour vérifier prix?|
 |  A6 |   MUST   |   🟥   | Logique applicative |    1    | Produit **valide** ajouté par formulaire s'affiche dans la page d'affichage des produits | Implémenter validation et la tester |
 |  B1 |  SHOULD  |   ✅   | Séparer form et table produit|| Séparer la section d'affichage produits et formulaire |   Lien vers autre page pour remplir formulaire?      |
 |  A7 |   MUST   |   ✅   | Bouton modification produit |2| Nouveau bouton "Modifier" cliquable pour chaque produit |    id devrait être inclu?    |
