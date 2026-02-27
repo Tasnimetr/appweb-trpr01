@@ -17,6 +17,12 @@ const form = reactive<ProductForm>({
     stock: ''
 })
 
+const errors = reactive({
+    name: '',
+    price: '',
+    stock: ''
+})
+
 function createProduct(): Product {
     return {
         name: form.name,
@@ -27,6 +33,20 @@ function createProduct(): Product {
 }
 
 function submit(): void {
+
+    if (form.name.length < 3) {
+        errors.name = 'Le nom du produit doit être de minimum 3 caractères.'
+        return
+    }
+    if (form.price.length >= 0) {
+        errors.price = 'Le prix du produit doit être un nombre valide'
+        return
+    }
+    if (form.stock.length >= 0) {
+        errors.stock = 'Le stock du produit doit être un nombre entier'
+        return
+    }
+    errors.name = ''
     const product = createProduct()
     products.value.push(product)
     resetForm()
@@ -45,10 +65,11 @@ function resetForm(): void {
     <h1>Ajouter un produit</h1>
 
     <form @submit.prevent="submit">
-        <input v-model="form.name" placeholder="Nom" />
-        <input v-model="form.price" type="number" placeholder="Prix" />
-        <textarea v-model="form.description" placeholder="Description"></textarea>
-        <input v-model="form.stock" type="number" placeholder="Stock" />
+        <input v-model="form.name" placeholder="Nom" required />
+        <p v-if="errors.name" class="text-danger">{{ errors.name }}</p>
+        <input v-model="form.price" type="number" placeholder="Prix" required />
+        <textarea v-model="form.description" placeholder="Description" required></textarea>
+        <input v-model="form.stock" type="number" placeholder="Stock" required />
         <button type="submit">Ajouter</button>
     </form>
 </template>
@@ -67,7 +88,9 @@ h1 {
     align-content: center;
 }
 
-input, textarea, button {
+input,
+textarea,
+button {
     padding: 8px;
     font-size: 14px;
 }
