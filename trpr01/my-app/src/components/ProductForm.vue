@@ -42,7 +42,7 @@ function resetForm(): void {
 
 <template>
 
-    <h1>Formulaire</h1>
+    <h1>Ajouter un produit</h1>
 
     <form @submit.prevent="submit">
         <input v-model="form.name" placeholder="Nom" />
@@ -59,6 +59,12 @@ form {
     flex-direction: column;
     gap: 12px;
     width: 300px;
+    margin-left: 25px;
+}
+
+h1 {
+    width: 350px;
+    align-content: center;
 }
 
 input, textarea, button {

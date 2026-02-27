@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import ProductTable from './components/ProductTable.vue'
 import ProductForm from './components/ProductForm.vue'
+
 </script>
 
 <template>
@@ -39,4 +40,7 @@ div {
   width: 50%;
   padding: 50px;
 }
+/*.right {
+  background-color: rgb(244, 230, 239);
+}*/
 </style>

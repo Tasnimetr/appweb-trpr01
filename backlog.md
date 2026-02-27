@@ -47,7 +47,8 @@
 |  B2 |  SHOULD  |   ⬜   | Produit supprimé disparaît |4 | Produit ne s'affiche plus parmi la liste table produits |       |
 |  A14|   MUST   |   ⬜   | Recherche produits |     6    | Champs de recherche de produits à la page affichage produits |        |
 |  A15|   MUST   |   ⬜   | Recherche dynamique |    6    | Résultats sont mise à jour instantannément à la recherche |        | 
-|  A16|   MUST   |   ⬜   | Détails produits |     7      | Champs détails-> nom, description, prix et stock |        | <
+|  A16|   MUST   |   ✅   | Détails produits |     7      | Champs détails-> nom, description, prix et stock |  Afficher des détails sous forme d'accordéon      |
+|  B3 |  SHOULD  |   🟦   | Accordéon collapse |     7    | Détail d'un produit collapse quand un autre produit est cliqué |   Trouver solution comment donner des ids différents pour ne pas qu'ils s'ouvrent tous |
 |  A17|  COULD   |   ⬜   | Retour en arrière |     7     | Bouton ou lien retour pour sortir des détails d'un produit spécifique |        |
 |  A18|   MUST   |   ⬜   | Affichage quantités |    8    | Affichage en temps réel des quantités avec indicateur visuel (plus en stock -> rouge)|        | 
 |  A19|   MUST   |   ⬜   | Avertissement rupture stock |9| Texte colorié s'affiche si produit atteint stock critique (>=3) |        | 
