@@ -42,7 +42,7 @@ function resetForm(): void {
 
 <template>
 
-    <h2>Formulaire</h2>
+    <h1>Formulaire</h1>
 
     <form @submit.prevent="submit">
         <input v-model="form.name" placeholder="Nom" />
@@ -51,13 +51,6 @@ function resetForm(): void {
         <input v-model="form.stock" type="number" placeholder="Stock" />
         <button type="submit">Ajouter</button>
     </form>
-
-    <!--<div v-for="product in products" :key="product.name">
-        <h3>Nom: {{ product.name }}</h3>
-        <p>Prix: {{ product.price }} $</p>
-        <p>Description: {{ product.description }}</p>
-        <p>Stock: {{ product.stock }}</p>
-    </div>-->
 </template>
 
 <style scoped>
