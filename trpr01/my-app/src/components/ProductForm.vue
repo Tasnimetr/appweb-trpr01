@@ -41,6 +41,9 @@ function resetForm(): void {
 </script>
 
 <template>
+
+    <h2>Formulaire</h2>
+
     <form @submit.prevent="submit">
         <input v-model="form.name" placeholder="Nom" />
         <input v-model="form.price" type="number" placeholder="Prix" />

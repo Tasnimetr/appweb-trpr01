@@ -4,12 +4,14 @@ import ProductForm from './components/ProductForm.vue'
 </script>
 
 <template>
-  <div>
-    <ProductTable />
-  </div>
-  <hr />
-  <div>
-    <ProductForm />
+  <div class="container">
+    <div class="left">
+      <ProductTable />
+    </div>
+
+    <div class="right">
+      <ProductForm />
+    </div>
   </div>
 </template>
 
@@ -28,5 +30,13 @@ import ProductForm from './components/ProductForm.vue'
 }
 div {
   margin-bottom: 50px;
+}
+.container {
+  display: flex;
+  width: 100%;
+}
+.left, .right {
+  width: 50%;
+  padding: 40px;
 }
 </style>

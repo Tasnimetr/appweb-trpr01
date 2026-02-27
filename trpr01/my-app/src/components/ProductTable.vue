@@ -11,8 +11,20 @@
         </tr>
         <tr v-for="product in products" :key="product.name">
             <td>{{ product.name }}</td>
-            <td><a href="#">Voir détails</a></td>
+            <td><a href="#">détails</a></td>
             <td>Boutons</td>
         </tr>
     </table>
-</template>
+</template> 
+
+<style scoped>
+table {
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px 40px;
+  /*border: 1px solid #ccc;*/
+}
+</style>
