@@ -68,8 +68,10 @@ function resetForm(): void {
         <input v-model="form.name" placeholder="Nom" required />
         <p v-if="errors.name" class="text-danger">{{ errors.name }}</p>
         <input v-model="form.price" type="number" placeholder="Prix" required />
+        <p v-if="errors.price" class="text-danger">{{ errors.price }}</p>
         <textarea v-model="form.description" placeholder="Description" required></textarea>
         <input v-model="form.stock" type="number" placeholder="Stock" required />
+        <p v-if="errors.stock" class="text-danger">{{ errors.stock }}</p>
         <button type="submit">Ajouter</button>
     </form>
 </template>

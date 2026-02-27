@@ -18,7 +18,7 @@ Pour **chaque séance**, écrire **8 à 10 lignes** (minimum) qui incluent :
 
 ---
 
-## Séance 1 — _2026-02-20_ (Durée : _1h50m_)
+## Séance 1 — _2026-02-20_ (Durée : _2h50m_)
 **Objectif de la séance :**  
 Initialiser le projet et mettre en place les fichiers de base._
 
@@ -49,7 +49,7 @@ Initialiser le projet et mettre en place les fichiers de base._
 Créer le formulaire qui ajoute effectivement des produits à la table.
 
 **Travail réalisé (8–10 lignes min)**  
-- …Durant cette séance, j'ai mis en place la page d'affichage des produits pour plus tard voir mes résultat.
+- Durant cette séance, j'ai mis en place la page d'affichage des produits pour plus tard voir mes résultat.
 - J'ai créé le formulaire des produits avec tous les champs nécessaire pour que ce critère soit acceptée.
 - Mon interface de produits se trouvait de base avec mon formulaire mais j'ai fini par changer cette emplacement.
 - Je l'ai plutôt déplacer vers un autre fichier que j'ai pu ainsi importer là où j'avais besoin des produits comme à la page des produits.
@@ -66,26 +66,30 @@ Créer le formulaire qui ajoute effectivement des produits à la table.
 
 ---
 
-## Séance 3 — _2026-02-27_ (Durée : _1h50m_)
+## Séance 3 — _2026-02-27_ (Durée : _2h50m_)
 **Objectif de la séance :**  
-…
+…Faire la validation des inputs du formulaire et mettre en place les boutons
 
 **Travail réalisé (8–10 lignes min)**  
-- …
-- …
-- …
-- …
-- …
-- …
-- …
-- …
-- …
+- Cette séance, j'ai commencé par séparer mon formulaire de la liste des produits.
+- J'ai décidé de les ajuster un à côté de l'autre pour une meilleure visibilité.
+- Ensuite, j'ai pris soin de faire le tour de tous mon code pour corriger le nommage, certains titres et le style css.
+- Ce qui m'a pris le plus de temps c'est l'affichage des détails. Je suis allée avec un format accordéon de Bootstrap mais dans mon cas c'était un seul item accordeon flush
+- qui boucle à travers une boucle foreach. Le fichier ProductTable a été sujet à de nombreux changements; c'étais une table mais ce ne le sera plus vu que l'accordéon affiche
+- tous les détails, les champs et même le bouton modifier. J'ai tester grâce à la console que ça sélectionne le bon produit et ça fonctionner. 
+- Alors, je vais sous peu ajouter les deux autres options de boutons. 
+- De plus, cette séance, j'ai commencé les validations des données du produit.
+- Pour le moment, je bloque juste sur comment valider les nombres (pour prix et stock).
+- Sinon, j'ai réussi à afficher le message pour le nom trop court et ça s'enlève dès que un produit valide est soumis.
 
 **Difficultés / bugs**  
-- …
+- Quand je clique sur l'accordéon d'un produit, tous les autres s'ouvrent alors j'ai du chercher un bon moment pour trouver le problème et faire fonctionner le collapse.
+- Aussi, vu qu'on n'utilise pas beaucoup css, j'ai un peu bugger pour me rappeller les terminologies.
 
 **Solutions / pistes testées**  
-- …
+- Au final, je me suis servie de l'id du produit dans l'id de l'accordéon pour rendre chaque accordéon unique et 
+- pouvoir ouvrir l'accordéon des détails d'un seul produit à la fois.
+- Pour le style, chatgpt a pu m'aider à faire du sens.
 
 ---
 

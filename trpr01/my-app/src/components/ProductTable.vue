@@ -29,7 +29,6 @@ function editProduct(id: number): void {
                             </div>
                         </div>
                     </div>
-            
             </td>
         </tr>
         </div>
