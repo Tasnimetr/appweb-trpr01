@@ -7,35 +7,32 @@ function editProduct(id: number): void {
 }
 </script>
 <template>
-    <h1>Produits</h1>
+    <h1>Liste des produits</h1>
     <table>
-        <tr>
-            <th>Nom</th>
-            <th>Options</th>
-        </tr>
+        <div class="accordion accordion-flush" id="accordionFlushExample">
         <tr v-for="(product, id) in products" :key="product.name">
             <td>
-                <div class="accordion accordion-flush" id="accordionFlushExample">
                     <div class="accordion-item">
-                        <h2 class="accordion-header" id="flush-headingOne">
+                        <h2 class="accordion-header" :id="'flush-heading' + id">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                :data-bs-target="'#flush-collapse' + id" aria-expanded="false" :aria-controls="'flush-collapse' + id">
                                 {{ product.name }}
                             </button>
                         </h2>
-                        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                        <div :id="'flush-collapse' + id" class="accordion-collapse collapse" :aria-labelledby="'flush-heading' + id"
                             data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body">
-                                <p>{{ product.description }}</p>
+                                <p>Description: {{ product.description }}</p>
                                 <p>Prix: {{ product.price }}$</p>
                                 <p>Stock: {{ product.stock }}</p>
+                                <button @click="editProduct(id)">Modifier</button>
                             </div>
                         </div>
                     </div>
-                </div>
+            
             </td>
-            <td><button @click="editProduct(id)">Modifier</button></td>
         </tr>
+        </div>
     </table>
 
 </template>
@@ -53,4 +50,9 @@ td {
     padding: 10px 50px;
     /*border: 1px solid #ccc;*/
 }
+
+.accordion-item {
+    width: 400px;
+}
+
 </style>

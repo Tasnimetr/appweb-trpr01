@@ -34,8 +34,8 @@
 |  A2 |   MUST   |   ✅   | Affichage produits |    5     | Tableau affiche nom produit, lien vers détails et options (boutons) | Rien encore à afficher dans le tableau, boutons créés plus tard |
 |  A3 |   MUST   |   ✅   | Formulaire ajout produit |  1 | Champs formulaire-> nom, description, prix et stock |            |
 |  A4 |   MUST   |   ✅   | Bouton ajout produit| 1       | Bouton "Ajouter" cliquable sous le formulaire |                 |
-|  A5 |   MUST   |   ⬜   | Validation au clic bouton | 1 | Formulaire non envoyé si données manquantes |    vérifier input dans ProductForm    |
-|  A6 |   MUST   |   ⬜   | Logique applicative |    1    | Produit **valide** ajouté par formulaire s'affiche dans la page d'affichage des produits | Doit s'afficher maintenant dans page produit |
+|  A5 |   MUST   |   🟦   | Validation au clic bouton | 1 | Formulaire non envoyé si données manquantes |    vérifier input dans ProductForm    |
+|  A6 |   MUST   |   🟥   | Logique applicative |    1    | Produit **valide** ajouté par formulaire s'affiche dans la page d'affichage des produits | Implémenter validation et la tester |
 |  B1 |  SHOULD  |   ✅   | Séparer form et table produit|| Séparer la section d'affichage produits et formulaire |   Lien vers autre page pour remplir formulaire?      |
 |  A7 |   MUST   |   ✅   | Bouton modification produit |2| Nouveau bouton "Modifier" cliquable pour chaque produit |    id devrait être inclu?    |
 |  A8 |   MUST   |   ⬜   | Formulaire préremplit |   2   | Nouveau formulaire généré prérempli par les données du produit sélectionné |        |
@@ -48,7 +48,7 @@
 |  A14|   MUST   |   ⬜   | Recherche produits |     6    | Champs de recherche de produits à la page affichage produits |        |
 |  A15|   MUST   |   ⬜   | Recherche dynamique |    6    | Résultats sont mise à jour instantannément à la recherche |        | 
 |  A16|   MUST   |   ✅   | Détails produits |     7      | Champs détails-> nom, description, prix et stock |  Afficher des détails sous forme d'accordéon      |
-|  B3 |  SHOULD  |   🟦   | Accordéon collapse |     7    | Détail d'un produit collapse quand un autre produit est cliqué |   Trouver solution comment donner des ids différents pour ne pas qu'ils s'ouvrent tous |
+|  B3 |  SHOULD  |   ✅   | Accordéon collapse |     7    | Détail d'un produit collapse quand un autre produit est cliqué |   Trouver solution comment donner des ids différents pour ne pas qu'ils s'ouvrent tous |
 |  A17|  COULD   |   ⬜   | Retour en arrière |     7     | Bouton ou lien retour pour sortir des détails d'un produit spécifique |        |
 |  A18|   MUST   |   ⬜   | Affichage quantités |    8    | Affichage en temps réel des quantités avec indicateur visuel (plus en stock -> rouge)|        | 
 |  A19|   MUST   |   ⬜   | Avertissement rupture stock |9| Texte colorié s'affiche si produit atteint stock critique (>=3) |        | 

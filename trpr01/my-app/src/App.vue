@@ -38,7 +38,7 @@ div {
 }
 .left, .right {
   width: 50%;
-  padding: 50px;
+  padding: 100px;
 }
 /*.right {
   background-color: rgb(244, 230, 239);
