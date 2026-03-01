@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import { products } from '../products'
+import { products, editedProduct} from '../products'
+import type { Product  } from '../products'
 
-function editProduct(id: number): void {
-    const product = products.value[id]
+function editProduct(product: Product): void {
+    editedProduct.value = product
     console.log('Modifier le produit:', product)
 }
 </script>
@@ -12,6 +13,7 @@ function editProduct(id: number): void {
         <div class="accordion accordion-flush" id="accordionFlushExample">
         <tr v-for="(product, id) in products" :key="product.name">
             <td>
+                <!--source exemple accordéon: https://getbootstrap.com/docs/5.0/components/accordion/-->
                     <div class="accordion-item">
                         <h2 class="accordion-header" :id="'flush-heading' + id">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -25,7 +27,7 @@ function editProduct(id: number): void {
                                 <p>Description: {{ product.description }}</p>
                                 <p>Prix: {{ product.price }}$</p>
                                 <p>Stock: {{ product.stock }}</p>
-                                <button @click="editProduct(id)">Modifier</button>
+                                <button @click="editProduct(product)">Modifier</button>
                             </div>
                         </div>
                     </div>
