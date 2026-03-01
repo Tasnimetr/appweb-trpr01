@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { reactive } from 'vue'
 import { products } from '../products'
-import type { Product } from '../products'
+import type { Product  } from '../products'
 
 interface ProductForm {
     name: string
@@ -25,6 +25,8 @@ const errors = reactive({
 
 function createProduct(): Product {
     return {
+        //source: AppWebGPT (comment générer un id unique en TypeScript)
+        id: crypto.randomUUID(),
         name: form.name,
         price: Number(form.price),
         description: form.description,
