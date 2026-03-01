@@ -38,7 +38,8 @@
 |  A6 |   MUST   |   🟥   | Logique applicative |    1    | Produit **valide** ajouté par formulaire s'affiche dans la page d'affichage des produits | Implémenter validation et la tester |
 |  B1 |  SHOULD  |   ✅   | Séparer form et table produit|| Séparer la section d'affichage produits et formulaire |   Lien vers autre page pour remplir formulaire?      |
 |  A7 |   MUST   |   ✅   | Bouton modification produit |2| Nouveau bouton "Modifier" cliquable pour chaque produit |    id devrait être inclu?    |
-|  A8 |   MUST   |   ⬜   | Formulaire préremplit |   2   | Nouveau formulaire généré prérempli par les données du produit sélectionné |        |
+|  A8 |   MUST   |   ✅   | Formulaire préremplit |   2   | Nouveau formulaire généré prérempli par les données du produit sélectionné |        |
+|  B4 |  SHOULD  |   ✅   | Affichage formulaire  |   2   | Formulaire affiché et son titre selon ce qui est cliqué |    Même démarche pour duplication produit   |
 |  A9 |   MUST   |   ⬜   | Bouton duplication produit |3 | Nouveau bouton "Dupliquer" cliquable pour chaque produit |        |
 |  A10|   MUST   |   ⬜   | Formulaire préremplit |   3   | Nouveau formulaire généré prérempli par les données du produit sélectionné, sauf l'id |        |
 |  A11|   MUST   |   ⬜   | Nouveau Id généré |     3     | Nouveau Id généré pour le nouveau produit duppliqué |   Validation id unique   |

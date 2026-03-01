@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import ProductTable from './components/ProductTable.vue'
 import ProductForm from './components/ProductForm.vue'
+import EditForm from './components/EditForm.vue'
+import { editedProduct } from './products';
 
 </script>
 
@@ -11,7 +13,8 @@ import ProductForm from './components/ProductForm.vue'
     </div>
 
     <div class="right">
-      <ProductForm />
+       <EditForm v-if="editedProduct"/>
+      <ProductForm v-else/>
     </div>
   </div>
 </template>
