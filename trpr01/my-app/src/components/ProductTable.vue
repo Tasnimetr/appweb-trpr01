@@ -5,7 +5,7 @@ import type { Product  } from '../products'
 function editProduct(product: Product): void {
     editedProduct.value = product
     //vérification produit séléctionné sur console
-    console.log('Modifier le produit:', product)
+    console.log('Produit à modifier->', product)
 }
 </script>
 <template>
