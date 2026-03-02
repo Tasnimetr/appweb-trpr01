@@ -49,7 +49,7 @@ Initialiser le projet et mettre en place les fichiers de base._
 Créer le formulaire qui ajoute effectivement des produits à la table.
 
 **Travail réalisé (8–10 lignes min)**  
-- Durant cette séance, j'ai mis en place la page d'affichage des produits pour plus tard voir mes résultat.
+- Durant cette séance, j'ai décidé de commencer par mettre en place la page d'affichage des produits en premier pour plus tard voir mes résultat.
 - J'ai créé le formulaire des produits avec tous les champs nécessaire pour que ce critère soit acceptée.
 - Mon interface de produits se trouvait de base avec mon formulaire mais j'ai fini par changer cette emplacement.
 - Je l'ai plutôt déplacer vers un autre fichier que j'ai pu ainsi importer là où j'avais besoin des produits comme à la page des produits.
@@ -62,7 +62,7 @@ Créer le formulaire qui ajoute effectivement des produits à la table.
 - le découpage de l'application en composantes
 
 **Solutions / pistes testées**  
-- J'ai analysé les récits utilisateurs de mon mieux et j'ai mis du temps pour les ordonner de la manière qui fait du sens pour moi comme la page d'affichage avant le formulaire.
+- J'ai analysé les récits utilisateurs de mon mieux et j'ai décidé de les ordonner de la manière qui fait du sens pour moi comme la page d'affichage avant le formulaire.
 
 ---
 
@@ -84,12 +84,12 @@ Créer le formulaire qui ajoute effectivement des produits à la table.
 
 **Difficultés / bugs**  
 - Quand je clique sur l'accordéon d'un produit, tous les autres s'ouvrent alors j'ai du chercher un bon moment pour trouver le problème et faire fonctionner le collapse.
-- Aussi, vu qu'on n'utilise pas beaucoup css, j'ai un peu bugger pour me rappeller les terminologies.
+- Aussi, vu qu'on n'utilise pas beaucoup css, j'ai eu un bug pour me rappeller les terminologies.
 
 **Solutions / pistes testées**  
 - Au final, je me suis servie de l'id du produit dans l'id de l'accordéon pour rendre chaque accordéon unique et 
 - pouvoir ouvrir l'accordéon des détails d'un seul produit à la fois.
-- Pour le style, chatgpt a pu m'aider à faire du sens.
+- Pour le style, je me suis servie de chatgpt.
 
 ---
 

@@ -25,7 +25,7 @@ const errors = reactive({
 
 function createProduct(): Product {
     return {
-        //source: AppWebGPT (comment générer un id unique en TypeScript)
+        //source: AppWebGPT (prompt->comment générer un id unique en TypeScript)
         id: crypto.randomUUID(),
         name: form.name,
         price: Number(form.price),
@@ -36,17 +36,23 @@ function createProduct(): Product {
 
 function submit(): void {
 
-    if (form.name.length < 3) {
+    if (form.name.trim().length < 3) {
         errors.name = 'Le nom du produit doit être de minimum 3 caractères.'
         return
+    } else {
+        errors.name = ''
     }
-    if (form.price.length >= 0) {
+    if (Number(form.price) < 0) {
         errors.price = 'Le prix du produit doit être un nombre valide'
         return
+    } else {
+        errors.price = ''
     }
-    if (form.stock.length >= 0) {
+    if (Number(form.stock) < 0) {
         errors.stock = 'Le stock du produit doit être un nombre entier'
         return
+    } else {
+        errors.stock = ''
     }
     errors.name = ''
     const product = createProduct()

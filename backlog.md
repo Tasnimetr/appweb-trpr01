@@ -46,8 +46,9 @@
 |  A12|   MUST   |   ⬜   | Bouton supression produit | 4 | Nouveau bouton "Supprimer" cliquable pour chaque produit |        |
 |  A13|   MUST   |   ⬜   | Confirmation suppression |  4 | Texte colorié s'affiche un moment confirmant clairement la supression du produit |        |
 |  B2 |  SHOULD  |   ⬜   | Produit supprimé disparaît |4 | Produit ne s'affiche plus parmi la liste table produits |       |
-|  A14|   MUST   |   ⬜   | Recherche produits |     6    | Champs de recherche de produits à la page affichage produits |        |
-|  A15|   MUST   |   ⬜   | Recherche dynamique |    6    | Résultats sont mise à jour instantannément à la recherche |        | 
+|  A14|   MUST   |   ⬜   | Champs Recherche produits | 6 | Champs de recherche de produits à la page affichage produits |        |
+|  A15|   MUST   |   ⬜   | Recherche dynamique |    6    | La recherche filtre en temps réel |        |
+|  B5 |  SHOULD  |   ⬜   | Résultat recherche claire | 6 | un message apparaît si aucun résultat|        |
 |  A16|   MUST   |   ✅   | Détails produits |     7      | Champs détails-> nom, description, prix et stock |  Afficher des détails sous forme d'accordéon      |
 |  B3 |  SHOULD  |   ✅   | Accordéon collapse |     7    | Détail d'un produit collapse quand un autre produit est cliqué |   Trouver solution comment donner des ids différents pour ne pas qu'ils s'ouvrent tous |
 |  A17|  COULD   |   ⬜   | Retour en arrière |     7     | Bouton ou lien retour pour sortir des détails d'un produit spécifique |        |
