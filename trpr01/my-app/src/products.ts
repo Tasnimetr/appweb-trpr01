@@ -9,11 +9,11 @@ export interface Product {
 }
 
 export const products = ref<Product[]>([
-    { id: '1', name: 'Chaussures', price: 75, description: 'Chaussures de sport', stock: 25 },
-    { id: '2', name: 'Robes', price: 120, description: 'Robes de soirée', stock: 6 },
-    { id: '3', name: 'Sac', price: 250, description: 'Sac à main', stock: 13 },
-    { id: '4', name: 'Casquette', price: 15, description: 'Casquette Adidas', stock: 37 },
+    { id: '1', name: 'Lys', price: 49.99, description: 'Bouquet de Lys', stock: 12 },
+    { id: '2', name: 'Roses', price: 30.41, description: 'Bouquet de roses', stock: 6 },
+    { id: '3', name: 'Gerberas', price: 54.99, description: 'Bouquet de gerberas', stock: 9 },
+    { id: '4', name: 'Tulipes', price: 52.95, description: 'Bouquet de tulipes', stock: 18 },
 ])
 
-//intellisense pour ref
+//copilot inligne suggetions pour ref
 export const editedProduct = ref<Product | null>(null)

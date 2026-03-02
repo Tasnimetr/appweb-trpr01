@@ -8,7 +8,7 @@ function submit(): void {
 </script>
 <template>
     <div v-if="editedProduct">
-    <h1>Modifier un produit</h1>
+    <h1>Modifier un bouquet</h1>
 
     <form @submit.prevent="submit">
         <input v-model="editedProduct.name" required />

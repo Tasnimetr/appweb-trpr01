@@ -70,7 +70,7 @@ function resetForm(): void {
 
 <template>
 
-    <h1>Ajouter un produit</h1>
+    <h1>Ajouter une fleur</h1>
 
     <form @submit.prevent="submit">
         <input v-model="form.name" placeholder="Nom" required />

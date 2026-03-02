@@ -9,7 +9,7 @@ function editProduct(product: Product): void {
 }
 </script>
 <template>
-    <h1>Liste des produits</h1>
+    <h1>Liste des fleurs</h1>
     <table>
         <div class="accordion accordion-flush" id="accordionFlushExample">
         <tr v-for="(product, id) in products" :key="product.name">
