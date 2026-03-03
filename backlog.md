@@ -40,9 +40,9 @@
 |  A7 |   MUST   |   ✅   | Bouton modification produit |2| Nouveau bouton "Modifier" cliquable pour chaque produit |    id devrait être inclu?    |
 |  A8 |   MUST   |   ✅   | Formulaire préremplit |   2   | Nouveau formulaire généré prérempli par les données du produit sélectionné |        |
 |  B4 |  SHOULD  |   ✅   | Affichage formulaire  |   2   | Formulaire affiché et son titre selon ce qui est cliqué |    Même démarche pour duplication produit   |
-|  A9 |   MUST   |   ⬜   | Bouton duplication produit |3 | Nouveau bouton "Dupliquer" cliquable pour chaque produit |        |
-|  A10|   MUST   |   ⬜   | Formulaire préremplit |   3   | Nouveau formulaire généré prérempli par les données du produit sélectionné, sauf l'id |        |
-|  A11|   MUST   |   ⬜   | Nouveau Id généré |     3     | Nouveau Id généré pour le nouveau produit duppliqué |   Validation id unique   |
+|  A9 |   MUST   |   ✅   | Bouton duplication produit |3 | Nouveau bouton "Dupliquer" cliquable pour chaque produit |        |
+|  A10|   MUST   |   🟦   | Formulaire préremplit |   3   | Nouveau formulaire généré prérempli par les données du produit sélectionné, sauf l'id |        |
+|  A11|   MUST   |   ✅   | Nouveau Id généré |     3     | Nouveau Id généré pour le nouveau produit duppliqué |   Validation id unique   |
 |  A12|   MUST   |   ⬜   | Bouton supression produit | 4 | Nouveau bouton "Supprimer" cliquable pour chaque produit |        |
 |  A13|   MUST   |   ⬜   | Confirmation suppression |  4 | Texte colorié s'affiche un moment confirmant clairement la supression du produit |        |
 |  B2 |  SHOULD  |   ⬜   | Produit supprimé disparaît |4 | Produit ne s'affiche plus parmi la liste table produits |       |

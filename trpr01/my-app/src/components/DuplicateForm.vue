@@ -1,0 +1,43 @@
+<script setup lang="ts">
+import { duplicatedProduct } from '../products'
+
+function submit(): void {
+    //revenir à ProductForm
+    duplicatedProduct.value = null
+}
+</script>
+<template>
+    <div v-if="duplicatedProduct">
+    <h1>Dupliquer un bouquet</h1>
+
+    <form @submit.prevent="submit">
+        <input v-model="duplicatedProduct.name" required />
+        <input v-model="duplicatedProduct.price" type="number" required />
+        <textarea v-model="duplicatedProduct.description"  required></textarea>
+        <input v-model="duplicatedProduct.stock" type="number" required />
+        <button type="submit">Modifier</button>
+    </form>
+    </div>
+</template>
+
+<style scoped>
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 300px;
+    margin-left: 25px;
+}
+
+h1 {
+    width: 350px;
+    align-content: center;
+}
+
+input,
+textarea,
+button {
+    padding: 8px;
+    font-size: 14px;
+}
+</style>

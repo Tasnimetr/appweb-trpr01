@@ -2,7 +2,8 @@
 import ProductTable from './components/ProductTable.vue'
 import ProductForm from './components/ProductForm.vue'
 import EditForm from './components/EditForm.vue'
-import { editedProduct } from './products';
+import DuplicateForm from './components/DuplicateForm.vue';
+import { editedProduct, duplicatedProduct } from './products';
 
 </script>
 
@@ -11,6 +12,7 @@ import { editedProduct } from './products';
     <img src="./assets/logo.jpg" alt="logo" />
     <h1>Fleuriste Ste-foy</h1>
   </div>
+
   <div class="container2">
     <div class="left">
       <ProductTable />
@@ -18,6 +20,7 @@ import { editedProduct } from './products';
 
     <div class="right">
       <EditForm v-if="editedProduct" />
+      <DuplicateForm v-if="duplicatedProduct" />
       <ProductForm v-else />
     </div>
   </div>
@@ -50,7 +53,8 @@ div {
   gap: 15px;
   margin-bottom: 10px;
 }
-.container1 > img {
+
+.container1>img {
   height: 50px;
   width: auto;
 }

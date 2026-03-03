@@ -35,7 +35,6 @@ function createProduct(): Product {
 }
 
 function submit(): void {
-
     if (form.name.trim().length < 3) {
         errors.name = 'Le nom du produit doit être de minimum 3 caractères.'
         return
