@@ -43,7 +43,7 @@
 |  A9 |   MUST   |   ✅   | Bouton duplication produit |3 | Nouveau bouton "Dupliquer" cliquable pour chaque produit |        |
 |  A10|   MUST   |   🟥   | Formulaire préremplit |   3   | Nouveau formulaire généré prérempli par les données du produit sélectionné, sauf l'id |   Create un nouveau produit avec les même données ou copier celui séléctionner et le push avec un id différent?    |
 |  B6 |  SHOULD  |   ✅   | Désactiver champs formulaire|3| Pour modifier il faut cliquer le bouton modifer et non dupliquer|        |
-|  A11|   MUST   |   ✅   | Nouveau Id généré |     3     | Nouveau Id généré pour le nouveau produit duppliqué |   Validation id unique   |
+|  A11|   MUST   |   🟦   | Nouveau Id généré |     3     | Nouveau Id généré pour le nouveau produit duppliqué |   Trouver pourquoi l'id du produit original change aussi?   |
 |  A12|   MUST   |   ⬜   | Bouton supression produit | 4 | Nouveau bouton "Supprimer" cliquable pour chaque produit |        |
 |  A13|   MUST   |   ⬜   | Confirmation suppression |  4 | Texte colorié s'affiche un moment confirmant clairement la supression du produit |        |
 |  B2 |  SHOULD  |   ⬜   | Produit supprimé disparaît |4 | Produit ne s'affiche plus parmi la liste table produits |       |
