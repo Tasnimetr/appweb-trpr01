@@ -3,12 +3,18 @@ import { products, editedProduct, duplicatedProduct} from '../products'
 import type { Product  } from '../products'
 
 function editProduct(product: Product): void {
+    if (duplicatedProduct.value) {
+        duplicatedProduct.value = null;
+    }
     editedProduct.value = product
     //vérification produit séléctionné sur console
     console.log('Produit à modifier->', product)
 }
 
 function duplicateProduct(product: Product): void {
+    if (editedProduct.value) {
+        editedProduct.value = null;
+    }
     duplicatedProduct.value = product
     console.log('Produit à dupliquer->', product);
 }
