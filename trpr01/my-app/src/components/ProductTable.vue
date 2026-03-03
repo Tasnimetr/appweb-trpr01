@@ -29,6 +29,7 @@ function editProduct(product: Product): void {
                                 <p>Prix: {{ product.price }}$</p>
                                 <p>Stock: {{ product.stock }}</p>
                                 <button @click="editProduct(product)">Modifier</button>
+                                <button @click="editProduct(product)">Dupliquer</button>
                             </div>
                         </div>
                     </div>
