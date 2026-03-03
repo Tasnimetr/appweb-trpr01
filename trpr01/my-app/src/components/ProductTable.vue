@@ -9,9 +9,9 @@ function editProduct(product: Product): void {
 }
 
 function duplicateProduct(product: Product): void {
-    console.log('Produit à dupliquer->', product)
-    product.id = crypto.randomUUID();
+    console.log('Produit à dupliquer->', product);
     duplicatedProduct.value = product
+    products.value.push(product)
     //vérification produit séléctionné sur console
     console.log('Produit dupliqué->', product)
 }

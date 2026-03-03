@@ -20,7 +20,7 @@ import { editedProduct, duplicatedProduct } from './products';
 
     <div class="right">
       <EditForm v-if="editedProduct" />
-      <DuplicateForm v-if="duplicatedProduct" />
+      <DuplicateForm v-else-if="duplicatedProduct" />
       <ProductForm v-else />
     </div>
   </div>
