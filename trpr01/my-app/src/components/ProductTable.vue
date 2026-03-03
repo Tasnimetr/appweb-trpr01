@@ -42,6 +42,7 @@ function duplicateProduct(product: Product): void {
                                 <p>Stock: {{ product.stock }}</p>
                                 <button @click="editProduct(product)">Modifier</button>
                                 <button @click="duplicateProduct(product)">Dupliquer</button>
+                                <button @click="duplicateProduct(product)">Supprimer</button>
                             </div>
                         </div>
                     </div>
@@ -68,6 +69,10 @@ td {
 
 .accordion-item {
     width: 400px;
+}
+
+button {
+    margin-right: 5px;
 }
 
 </style>

@@ -45,7 +45,7 @@
 |  B6 |  SHOULD  |   ✅   | Désactiver champs formulaire|3| Pour modifier il faut cliquer le bouton modifer et non dupliquer|        |
 |  A11|   MUST   |   🟦   | Nouveau Id généré |     3     | Nouveau Id généré pour le nouveau produit duppliqué |   Trouver pourquoi l'id du produit original change aussi?   |
 |  C1 |  COULD   |   ✅   | Switch formulaire facilement || Ne pas rester bloquer sur un formulaire si on décide de ne pas submit (la modification ou la duplication) | Possible car rien de créer ou de modifier avant de cliquer officiellement sur le bouton submit du formulaire |
-|  A12|   MUST   |   ⬜   | Bouton supression produit | 4 | Nouveau bouton "Supprimer" cliquable pour chaque produit |        |
+|  A12|   MUST   |   ✅   | Bouton supression produit | 4 | Nouveau bouton "Supprimer" cliquable pour chaque produit |        |
 |  A13|   MUST   |   ⬜   | Confirmation suppression |  4 | Texte colorié s'affiche un moment confirmant clairement la supression du produit |        |
 |  B2 |  SHOULD  |   ⬜   | Produit supprimé disparaît |4 | Produit ne s'affiche plus parmi la liste table produits |       |
 |  A14|   MUST   |   ⬜   | Champs Recherche produits | 6 | Champs de recherche de produits à la page affichage produits |        |
