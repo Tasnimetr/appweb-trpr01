@@ -11,11 +11,11 @@ function submit(): void {
     <h1>Dupliquer un bouquet</h1>
 
     <form @submit.prevent="submit">
-        <input v-model="duplicatedProduct.name" required />
-        <input v-model="duplicatedProduct.price" type="number" required />
-        <textarea v-model="duplicatedProduct.description"  required></textarea>
-        <input v-model="duplicatedProduct.stock" type="number" required />
-        <button type="submit">Modifier</button>
+        <input v-model="duplicatedProduct.name" disabled />
+        <input v-model="duplicatedProduct.price" type="number" disabled />
+        <textarea v-model="duplicatedProduct.description"  disabled></textarea>
+        <input v-model="duplicatedProduct.stock" type="number" disabled />
+        <button type="submit">Dupliquer</button>
     </form>
     </div>
 </template>

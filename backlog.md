@@ -41,7 +41,8 @@
 |  A8 |   MUST   |   ✅   | Formulaire préremplit |   2   | Nouveau formulaire généré prérempli par les données du produit sélectionné |        |
 |  B4 |  SHOULD  |   ✅   | Affichage formulaire  |   2   | Formulaire affiché et son titre selon ce qui est cliqué |    Même démarche pour duplication produit   |
 |  A9 |   MUST   |   ✅   | Bouton duplication produit |3 | Nouveau bouton "Dupliquer" cliquable pour chaque produit |        |
-|  A10|   MUST   |   🟦   | Formulaire préremplit |   3   | Nouveau formulaire généré prérempli par les données du produit sélectionné, sauf l'id |        |
+|  A10|   MUST   |   🟥   | Formulaire préremplit |   3   | Nouveau formulaire généré prérempli par les données du produit sélectionné, sauf l'id |   Create un nouveau produit avec les même données ou copier celui séléctionner et le push avec un id différent?    |
+|  B6 |  SHOULD  |   ✅   | Désactiver champs formulaire|3| Pour modifier il faut cliquer le bouton modifer et non dupliquer|        |
 |  A11|   MUST   |   ✅   | Nouveau Id généré |     3     | Nouveau Id généré pour le nouveau produit duppliqué |   Validation id unique   |
 |  A12|   MUST   |   ⬜   | Bouton supression produit | 4 | Nouveau bouton "Supprimer" cliquable pour chaque produit |        |
 |  A13|   MUST   |   ⬜   | Confirmation suppression |  4 | Texte colorié s'affiche un moment confirmant clairement la supression du produit |        |
