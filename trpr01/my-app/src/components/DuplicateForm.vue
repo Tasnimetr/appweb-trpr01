@@ -15,7 +15,7 @@ function submit(): void {
         description: duplicatedProduct.value.description,
         stock: Number(duplicatedProduct.value.stock)
     }
-    
+
     products.value.push(productCopy)
     duplicatedProduct.value = null
 }
