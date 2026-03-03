@@ -17,3 +17,5 @@ export const products = ref<Product[]>([
 
 //copilot inligne suggetions pour ref
 export const editedProduct = ref<Product | null>(null)
+
+export const duplicatedProduct = ref<Product | null>(null)

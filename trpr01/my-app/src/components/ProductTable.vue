@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { products, editedProduct} from '../products'
+import { products, editedProduct, duplicatedProduct} from '../products'
 import type { Product  } from '../products'
 
 function editProduct(product: Product): void {
@@ -7,6 +7,13 @@ function editProduct(product: Product): void {
     //vérification produit séléctionné sur console
     console.log('Produit à modifier->', product)
 }
+
+function duplicateProduct(product: Product): void {
+    duplicatedProduct.value = product
+    //vérification produit séléctionné sur console
+    console.log('Produit à dupliquer->', product)
+}
+
 </script>
 <template>
     <h1>Liste des fleurs</h1>
@@ -29,7 +36,7 @@ function editProduct(product: Product): void {
                                 <p>Prix: {{ product.price }}$</p>
                                 <p>Stock: {{ product.stock }}</p>
                                 <button @click="editProduct(product)">Modifier</button>
-                                <button @click="editProduct(product)">Dupliquer</button>
+                                <button @click="duplicateProduct(product)">Dupliquer</button>
                             </div>
                         </div>
                     </div>
