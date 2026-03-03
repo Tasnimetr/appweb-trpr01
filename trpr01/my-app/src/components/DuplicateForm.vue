@@ -1,9 +1,22 @@
 <script setup lang="ts">
+import { products } from '../products'
 import { duplicatedProduct } from '../products'
 
 function submit(): void {
     //revenir à ProductForm
+    if (!duplicatedProduct.value) {
+        return;
+    }
+
+    const productCopy = {
+        id: crypto.randomUUID(),
+        name: duplicatedProduct.value.name,
+        price: Number(duplicatedProduct.value.price),
+        description: duplicatedProduct.value.description,
+        stock: Number(duplicatedProduct.value.stock)
+    }
     
+    products.value.push(productCopy)
     duplicatedProduct.value = null
 }
 </script>

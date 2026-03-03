@@ -9,18 +9,8 @@ function editProduct(product: Product): void {
 }
 
 function duplicateProduct(product: Product): void {
+    duplicatedProduct.value = product
     console.log('Produit à dupliquer->', product);
-    const productCopy = {
-        id: crypto.randomUUID(),
-        name: product.name,
-        price: Number(product.price),
-        description: product.description,
-        stock: Number(product.stock)
-    }
-    duplicatedProduct.value = productCopy
-    products.value.push(productCopy)
-    //vérification produit séléctionné sur console
-    console.log('Produit dupliqué->', productCopy)
 }
 
 </script>
