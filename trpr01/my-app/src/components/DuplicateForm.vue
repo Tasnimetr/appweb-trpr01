@@ -3,6 +3,7 @@ import { duplicatedProduct } from '../products'
 
 function submit(): void {
     //revenir à ProductForm
+    
     duplicatedProduct.value = null
 }
 </script>
