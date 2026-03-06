@@ -3,7 +3,7 @@ import { ref } from "vue";
 import type { Product } from '../products'
 import { products, editedProduct, duplicatedProduct } from '../products'
 
-const displayMessage = ref(false);
+const displayConfirmation = ref(false);
 let input = ref("");
 
 function editProduct(product: Product): void {
@@ -25,7 +25,7 @@ function duplicateProduct(product: Product): void {
 function deleteProduct(product: Product): void {
     products.value.splice(products.value.indexOf(product), 1);
     console.log('Produit à supprimer->', product);
-    displayMessage.value = true;
+    displayConfirmation.value = true;
 }
 
 
@@ -75,15 +75,14 @@ function filteredList() {
         </div>
     </div>
     </table>
-    <dialog class="alert alert-success" v-if="displayMessage" open>
+    <dialog class="alert alert-success" v-if="displayConfirmation" open>
         <!--source: https://www.w3schools.com/tags/tag_dialog.asp-->
         Supression Réussie
         <form method="dialog">
-            <button @click="displayMessage = false">X</button>
+            <button @click="displayConfirmation = false">X</button>
             <!--source: AppWebGpt pour comrpendre comment fermer dialogue(comment fermer un dialogue avec un bouton)-->
         </form>
     </dialog>
-
 </template>
 
 
