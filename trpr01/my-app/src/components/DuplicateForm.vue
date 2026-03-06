@@ -9,7 +9,7 @@ function submit(): void {
     }
 
     const productCopy = {
-        id: crypto.randomUUID(),
+        id: (products.value.length + 1).toString(),
         name: duplicatedProduct.value.name,
         price: Number(duplicatedProduct.value.price),
         description: duplicatedProduct.value.description,
