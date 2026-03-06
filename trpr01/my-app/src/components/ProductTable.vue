@@ -42,9 +42,11 @@ function filteredList() {
 <template>
     <h1>Liste des fleurs</h1>
     <table>
+        <div>
         <div class="accordion accordion-flush" id="accordionFlushExample">
-            <tr v-for="(product, id) in products" :key="product.name">
-                <td>
+        <input type="text" v-model="input" placeholder="Rechercher une fleur..." />
+        <div class="item product" v-for="(product, id) in filteredList()" :key="product.name">
+            <td>
                     <!--source exemple accordéon: https://getbootstrap.com/docs/5.0/components/accordion/-->
                     <div class="accordion-item">
                         <h2 class="accordion-header" :id="'flush-heading' + id">
@@ -67,8 +69,12 @@ function filteredList() {
                         </div>
                     </div>
                 </td>
-            </tr>
         </div>
+         <div class="item error" v-if="input && !filteredList().length">
+            <p>Aucun résultat trouvé!</p>
+        </div>
+        </div>
+    </div>
     </table>
     <dialog class="alert alert-success" v-if="displayMessage" open>
         <!--source: https://www.w3schools.com/tags/tag_dialog.asp-->
@@ -78,13 +84,6 @@ function filteredList() {
             <!--source: AppWebGpt pour comrpendre comment fermer dialogue(comment fermer un dialogue avec un bouton)-->
         </form>
     </dialog>
-
-    <div>
-        <input type="text" v-model="input" placeholder="Rechercher une fleur..." />
-        <div class="item product" v-for="product in filteredList()" :key="product">
-            <p>{{ product.name }}</p>
-        </div>
-    </div>
 
 </template>
 
