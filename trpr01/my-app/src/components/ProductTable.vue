@@ -3,7 +3,7 @@ import { ref } from "vue";
 import type { Product } from '../products'
 import { products, editedProduct, duplicatedProduct } from '../products'
 
-const displayConfirmation = ref(false);
+const displayDeletionConfirmation = ref(false);
 let input = ref("");
 
 function editProduct(product: Product): void {
@@ -25,7 +25,7 @@ function duplicateProduct(product: Product): void {
 function deleteProduct(product: Product): void {
     products.value.splice(products.value.indexOf(product), 1);
     console.log('Produit à supprimer->', product);
-    displayConfirmation.value = true;
+    displayDeletionConfirmation.value = true;
 }
 
 
@@ -41,45 +41,49 @@ function filteredList() {
     <h1>Liste des fleurs</h1>
     <table>
         <div>
-        <div class="accordion accordion-flush" id="accordionFlushExample">
-        <input type="text" v-model="input" placeholder="Rechercher une fleur..." />
-        <div class="item product" v-for="(product, id) in filteredList()" :key="product.name">
-            <td>
-                    <!--source exemple accordéon: https://getbootstrap.com/docs/5.0/components/accordion/-->
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" :id="'flush-heading' + id">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                :data-bs-target="'#flush-collapse' + id" aria-expanded="false"
-                                :aria-controls="'flush-collapse' + id">
-                                {{ product.name }}
-                            </button>
-                        </h2>
-                        <div :id="'flush-collapse' + id" class="accordion-collapse collapse"
-                            :aria-labelledby="'flush-heading' + id" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">
-                                <p>Description: {{ product.description }}</p>
-                                <p>Prix: {{ product.price }}$</p>
-                                <p v-if="product.stock <= 3" class="text-danger">Stock: {{ product.stock }}</p>
-                                <p v-else class="text-success">Stock: {{ product.stock }}</p>
-                                <button @click="editProduct(product)">Modifier</button>
-                                <button @click="duplicateProduct(product)">Dupliquer</button>
-                                <button @click="deleteProduct(product)">Supprimer</button>
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+                <input type="text" v-model="input" placeholder="Rechercher une fleur..." />
+                <div class="item product" v-for="(product, id) in filteredList()" :key="product.name">
+                    <td>
+                        <!--source exemple accordéon: https://getbootstrap.com/docs/5.0/components/accordion/-->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" :id="'flush-heading' + id">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    :data-bs-target="'#flush-collapse' + id" aria-expanded="false"
+                                    :aria-controls="'flush-collapse' + id">
+                                    {{ product.name }}
+                                </button>
+                            </h2>
+                            <div :id="'flush-collapse' + id" class="accordion-collapse collapse"
+                                :aria-labelledby="'flush-heading' + id" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <p>Description: {{ product.description }}</p>
+                                    <p>Prix: {{ product.price }}$</p>
+                                    <div v-if="product.stock <= 3" class="text-danger">
+                                        <p>Stock: {{ product.stock }}</p>
+                                        <p v-if="product.stock === 0">En rupture de stock!</p>
+                                        <p v-else>Stock critique</p>
+                                    </div>
+                                    <p v-else class="text-success">Stock: {{ product.stock }}</p>
+                                    <button @click="editProduct(product)">Modifier</button>
+                                    <button @click="duplicateProduct(product)">Dupliquer</button>
+                                    <button @click="deleteProduct(product)">Supprimer</button>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </td>
+                    </td>
+                </div>
+                <div class="item error" v-if="input && !filteredList().length">
+                    <p class="text-danger">Aucun résultat correspondant!</p>
+                </div>
+            </div>
         </div>
-         <div class="item error" v-if="input && !filteredList().length">
-            <p class="text-danger">Aucun résultat correspondant!</p>
-        </div>
-        </div>
-    </div>
     </table>
-    <dialog class="alert alert-success" v-if="displayConfirmation" open>
+    <dialog class="alert alert-success" v-if="displayDeletionConfirmation" open>
         <!--source: https://www.w3schools.com/tags/tag_dialog.asp-->
         Supression Réussie
         <form method="dialog">
-            <button @click="displayConfirmation = false">X</button>
+            <button @click="displayDeletionConfirmation = false">X</button>
             <!--source: AppWebGpt pour comrpendre comment fermer dialogue(comment fermer un dialogue avec un bouton)-->
         </form>
     </dialog>
