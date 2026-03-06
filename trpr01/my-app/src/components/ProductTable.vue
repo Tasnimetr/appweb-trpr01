@@ -59,7 +59,8 @@ function filteredList() {
                             <div class="accordion-body">
                                 <p>Description: {{ product.description }}</p>
                                 <p>Prix: {{ product.price }}$</p>
-                                <p>Stock: {{ product.stock }}</p>
+                                <p v-if="product.stock <= 3" class="text-danger">Stock: {{ product.stock }}</p>
+                                <p v-else class="text-success">Stock: {{ product.stock }}</p>
                                 <button @click="editProduct(product)">Modifier</button>
                                 <button @click="duplicateProduct(product)">Dupliquer</button>
                                 <button @click="deleteProduct(product)">Supprimer</button>

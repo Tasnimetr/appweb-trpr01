@@ -54,7 +54,7 @@
 |  A16|   MUST   |   ✅   | Détails produits |     7      | Champs détails-> nom, description, prix et stock |  Afficher des détails sous forme d'accordéon      |
 |  B3 |  SHOULD  |   ✅   | Accordéon collapse |     7    | Détail d'un produit collapse quand un autre produit est cliqué |   Trouver solution comment donner des ids différents pour ne pas qu'ils s'ouvrent tous |
 |  A17|  COULD   |   ⬜   | Retour en arrière |     7     | Bouton ou lien retour pour sortir des détails d'un produit spécifique |        |
-|  A18|   MUST   |   ⬜   | Affichage quantités |    8    | Affichage en temps réel des quantités avec indicateur visuel (plus en stock -> rouge)|        | 
+|  A18|   MUST   |   ✅   | Affichage quantités |    8    | Affichage en temps réel des quantités avec indicateur visuel (plus en stock -> rouge)|        | 
 |  A19|   MUST   |   ⬜   | Avertissement rupture stock |9| Texte colorié s'affiche si produit atteint stock critique (>=3) |        | 
 |  A20|   MUST   |   ⬜   | Bouton téléchargement CSV | 10| Nouveau bouton "Télécharger" / "Exporter" dans la page d'affichage des produits |        | 
 |  A21|   MUST   |   ⬜   | Exporter UI liste en CSV | 10 | UI liste produits se télécharge en format CSV |    qu'est-ce que CSV et comment ça marche?    | 
