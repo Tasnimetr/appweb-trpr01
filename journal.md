@@ -98,19 +98,23 @@ Créer le formulaire qui ajoute effectivement des produits à la table.
 …Finaliser la mise en page des boutons
 
 **Travail réalisé (8–10 lignes min)**  
-- Cette séance, j'ai créer les deux autres boutons(duplication et suppression)
-- J'ai surtout travaillé sur la logique applicative de la duplication
-- J'ai ajouté une méthode de duplication qui crée un nouvel produit avec les même données que l'original sauf pour l'id.
-- J'ai écarté les boutons l'un des autres pour un meilleur apperçu.
-- Et visuellement, la nouvelle duplication s'affiche.
-- J'ai aussi fait en sorte que le switch entre les formulaires soit simple à faire.
+- Cette séance, j'ai créer les deux autres boutons de duplication et de suppression.
+- J'ai surtout travaillé sur la logique applicative de la duplication de mon produit.
+- J'ai ajouté une méthode de duplication qui crée un nouvel produit avec les même données que l'original sauf pour l'id qui est généré au hasard.
+- Ensuite, j'ai écarté les boutons l'un des autres pour un meilleur apperçu.
+- Ainsi, visuellement la nouvelle duplication s'affichait mais quand on modifie l'une, ça ne modifie l'autre.
+- Grâce à quelques tests avec la console, j'ai pu trouver la cause et la régler. C'était une erreur de référence.
+- Après m'être assuré que la modification d'un dupliqué ne modifie pas aussi l'original, J'ai fait en sorte que le switch entre les formulaires soit simple
+- et qu'un utilisateur ne soit pas obligé de soumettre un formulaire pour passer à un autre, s'il change d'avis.
+- J'ai aussi décidé de désactiver les champs du formulaire de duplication vu que l'option de modification existe pour tous.
 
 **Difficultés / bugs**  
 - Comment séparer le nouveau produit de l'original à la duplication.
 - Et comment stocker la copy du produit avec un nouvel id.
 
 **Solutions / pistes testées**  
-- Pour la séparation, j'ai bien analysé et j'ai trouvé que je ne faisais pas une copie mais plutôt une nouvelle référence au produit original. 
+- Pour la séparation du nouveau produit et son original, je devais bien analyser son identification. J'ai donc décidé de me servir de la console pour afficher des messages 
+- qui m'indiquent l'id de chaque produit au clic. J'ai trouvé que je ne faisais pas une copie mais plutôt une nouvelle référence au produit original. 
 - Alors j'ai corrigé ça, j'ai décidé pour la duplication de faire la création d'un nouveau produit comme la méthode de création dans ProductForm. 
 - J'ai repris toutes les mêmes données sauf pour l'id que j'ai généré au hasard.
 - Après avoir bien penser, je crois que je devrais dorénavant attribuer les nouveaux id basé sur la longueur de la valeur de products(products.value.length) 
