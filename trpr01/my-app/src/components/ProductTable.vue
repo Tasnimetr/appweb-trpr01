@@ -1,9 +1,10 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import type { Product  } from '../products'
-import { products, editedProduct, duplicatedProduct} from '../products'
+import type { Product } from '../products'
+import { products, editedProduct, duplicatedProduct } from '../products'
 
 const displayMessage = ref(false);
+let input = ref("");
 
 function editProduct(product: Product): void {
     if (duplicatedProduct.value) {
@@ -22,10 +23,20 @@ function duplicateProduct(product: Product): void {
 }
 
 function deleteProduct(product: Product): void {
-    products.value.splice( products.value.indexOf(product), 1);
+    products.value.splice(products.value.indexOf(product), 1);
     console.log('Produit à supprimer->', product);
     displayMessage.value = true;
 }
+
+
+//source: https://blog.logrocket.com/create-search-bar-vue/
+function filteredList() {
+    return products.value.filter((product) =>
+        product.name.toLowerCase().includes(input.value.toLowerCase())
+    );
+}
+
+
 </script>
 
 <template>
@@ -68,6 +79,13 @@ function deleteProduct(product: Product): void {
         </form>
     </dialog>
 
+    <div>
+        <input type="text" v-model="input" placeholder="Rechercher une fleur..." />
+        <div class="item product" v-for="product in filteredList()" :key="product">
+            <p>{{ product.name }}</p>
+        </div>
+    </div>
+
 </template>
 
 
@@ -83,7 +101,8 @@ td {
     padding: 10px 50px;
 }
 
-.accordion-item, dialog {
+.accordion-item,
+dialog {
     width: 400px;
 }
 
@@ -95,5 +114,4 @@ dialog {
 button {
     margin-right: 5px;
 }
-
 </style>
