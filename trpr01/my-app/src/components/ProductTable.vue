@@ -19,6 +19,11 @@ function duplicateProduct(product: Product): void {
     console.log('Produit à dupliquer->', product);
 }
 
+function deleteProduct(product: Product): void {
+    products.value.splice( products.value.indexOf(product), 1);
+    console.log('Produit à supprimer->', product);
+}
+
 </script>
 <template>
     <h1>Liste des fleurs</h1>
@@ -42,7 +47,7 @@ function duplicateProduct(product: Product): void {
                                 <p>Stock: {{ product.stock }}</p>
                                 <button @click="editProduct(product)">Modifier</button>
                                 <button @click="duplicateProduct(product)">Dupliquer</button>
-                                <button @click="duplicateProduct(product)">Supprimer</button>
+                                <button @click="deleteProduct(product)">Supprimer</button>
                             </div>
                         </div>
                     </div>
