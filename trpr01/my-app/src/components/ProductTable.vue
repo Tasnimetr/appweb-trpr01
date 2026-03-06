@@ -1,13 +1,15 @@
 <script setup lang="ts">
-import { products, editedProduct, duplicatedProduct} from '../products'
+import { ref } from "vue";
 import type { Product  } from '../products'
+import { products, editedProduct, duplicatedProduct} from '../products'
+
+const displayMessage = ref(false);
 
 function editProduct(product: Product): void {
     if (duplicatedProduct.value) {
         duplicatedProduct.value = null;
     }
     editedProduct.value = product
-    //vérification produit séléctionné sur console
     console.log('Produit à modifier->', product)
 }
 
@@ -22,25 +24,27 @@ function duplicateProduct(product: Product): void {
 function deleteProduct(product: Product): void {
     products.value.splice( products.value.indexOf(product), 1);
     console.log('Produit à supprimer->', product);
+    displayMessage.value = true;
 }
-
 </script>
+
 <template>
     <h1>Liste des fleurs</h1>
     <table>
         <div class="accordion accordion-flush" id="accordionFlushExample">
-        <tr v-for="(product, id) in products" :key="product.name">
-            <td>
-                <!--source exemple accordéon: https://getbootstrap.com/docs/5.0/components/accordion/-->
+            <tr v-for="(product, id) in products" :key="product.name">
+                <td>
+                    <!--source exemple accordéon: https://getbootstrap.com/docs/5.0/components/accordion/-->
                     <div class="accordion-item">
                         <h2 class="accordion-header" :id="'flush-heading' + id">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                :data-bs-target="'#flush-collapse' + id" aria-expanded="false" :aria-controls="'flush-collapse' + id">
+                                :data-bs-target="'#flush-collapse' + id" aria-expanded="false"
+                                :aria-controls="'flush-collapse' + id">
                                 {{ product.name }}
                             </button>
                         </h2>
-                        <div :id="'flush-collapse' + id" class="accordion-collapse collapse" :aria-labelledby="'flush-heading' + id"
-                            data-bs-parent="#accordionFlushExample">
+                        <div :id="'flush-collapse' + id" class="accordion-collapse collapse"
+                            :aria-labelledby="'flush-heading' + id" data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body">
                                 <p>Description: {{ product.description }}</p>
                                 <p>Prix: {{ product.price }}$</p>
@@ -51,10 +55,18 @@ function deleteProduct(product: Product): void {
                             </div>
                         </div>
                     </div>
-            </td>
-        </tr>
+                </td>
+            </tr>
         </div>
     </table>
+    <dialog class="alert alert-success" v-if="displayMessage" open>
+        <!--source: https://www.w3schools.com/tags/tag_dialog.asp-->
+        Supression Réussie
+        <form method="dialog">
+            <button @click="displayMessage = false">X</button>
+            <!--source: AppWebGpt pour comrpendre comment fermer dialogue(comment fermer un dialogue avec un bouton)-->
+        </form>
+    </dialog>
 
 </template>
 
@@ -69,11 +81,15 @@ table {
 th,
 td {
     padding: 10px 50px;
-    /*border: 1px solid #ccc;*/
 }
 
-.accordion-item {
+.accordion-item, dialog {
     width: 400px;
+}
+
+dialog {
+    margin-top: 10px;
+    margin-left: 50px;
 }
 
 button {
