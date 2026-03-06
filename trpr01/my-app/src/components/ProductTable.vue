@@ -29,14 +29,12 @@ function deleteProduct(product: Product): void {
 }
 
 
-//source: https://blog.logrocket.com/create-search-bar-vue/
+//source pour la barre de recherche: https://blog.logrocket.com/create-search-bar-vue/
 function filteredList() {
     return products.value.filter((product) =>
         product.name.toLowerCase().includes(input.value.toLowerCase())
     );
 }
-
-
 </script>
 
 <template>
@@ -71,7 +69,7 @@ function filteredList() {
                 </td>
         </div>
          <div class="item error" v-if="input && !filteredList().length">
-            <p>Aucun résultat trouvé!</p>
+            <p class="text-danger">Aucun résultat correspondant!</p>
         </div>
         </div>
     </div>
