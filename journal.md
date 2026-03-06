@@ -119,37 +119,46 @@ Créer le formulaire qui ajoute effectivement des produits à la table.
 - J'ai repris toutes les mêmes données sauf pour l'id que j'ai généré au hasard.
 - Après avoir bien penser, je crois que je devrais dorénavant attribuer les nouveaux id basé sur la longueur de la valeur de products(products.value.length) 
 - à la place de la longue chaîne de string qui n'est pas conforme avec mes autres id de base.
-
+- 
 
 ---
 
-## Séance 5 — _2026-03-06_ (Durée : _1h50m_)
+## Séance 5 — _2026-03-06_ (Durée : _2h50m_)
 **Objectif de la séance :**  
-…
+…Achever les récits utilisateurs (la supression, la recherche par nom et l'état du stock) + veiller à la qualité du code
 
 **Travail réalisé (8–10 lignes min)**  
-- …
-- …
-- …
-- …
-- …
-- …
-- …
-- …
-- …
+- Durant cette séance, j'ai travaillé sur une nouvelle fonction qui supprime le produit sélectionné de la liste des produits.
+- J'ai aussi corriger ma manière d'attribuer des id comme prévu dans la séance 4, maintenant ce n'est plus random mais basé sur la longueur de la valeur de products.
+- J'ai décidé de changer ça car les id sont beaucoup plus cohérent maintenant et identifie mieux mes produits qaund à leur emplacement dans la liste.
+- J'ai implémenté la confirmation de la supression. En fait, il y avait plusieurs options comme le modal de bootstrap ou un popover avec un timer mais 
+- j'ai choisi d'ouvrir un dialogue avec le message de confirmation affiché en vert pour montrer que la supression est réussie et qui se ferme quand on clique sur un X. 
+- Par la suite, j'ai mis en place la barre de recherche des types de fleurs pour les bouquets par nom. J'ai trouvé un très bon site qui m'a guidé à travers les étapes.
+- J'ai fait en sorte que la liste des produits s'affiche en fonction de la recherche et que si il n'y a aucune correspondance, un message en rouge 
+- qui dit "Aucun résultat correspondant!" s'affiche pour informer l'utilisateur. Pour améliorer la qualité du code, j'ai décidé de refactor rename la ref du 
+- message de confirmation vu que je commence à implémenter d'autres types de messages comme pour la recherche ou le stock.
+- J'ai aussi travaillé sur les codes de couleurs, pour le stock, j'ai décidé d'afficher tous montant en vert sauf s'il est égal ou plus bas que 3.
+- Si le stock est en bas de 3, j'affiche que le stock est critique mais si c'est égal à zéro alors j'affiche un message plus détaillé qui indique que c'est en rupture de stock.
+- Dans ma prochaine et dernière séance chez moi, je vais refactor rename product à mon produit réel concret, compléter la validation du champs prix et finalement
+- l'exportation dans le format CSV.
 
 **Difficultés / bugs**  
-- …
+- J'ai beaucoup hésité sur comment afficher le message de supression.
+- Je bloque encore sur la validation des prix.
+- Le découpage en composants -> J'ai fini les 9 premiers récits utilisateurs mais je n'ai que 4 composants.
 
 **Solutions / pistes testées**  
-- …
+- Il y avait de nombreuses manière de faire la supression mais la plupart nécessite du javascript alors j'ai continuer à chercher d'autre façons.
+- Heureusement vous avez mentionné la possibilité de pouvoir utiliser un dialogue alors j'ai fait mes recherches et j'ai essayé cette option qui a finit par bien marcher.
+- Pour la validation, je dois faire plus de recherche et essayer de réellement comprendre les expressions régulières pour vraiment savoir quoi écrire.
+- Je vais finir ce travail cette fin de semaine et séparer mon code en autans que de parties fonctionnelles.
 
 
 ---
 
 ## Résumé global (à compléter avant remise)
 - **Ce dont je suis le plus fier/fière :** …
-- **Ce que j’améliorerais avec plus de temps :** …
+- **Ce que j’améliorerais avec plus de temps :** la qualité du code
 - **3 apprentissages techniques :**  
   1) …  
   2) …  
