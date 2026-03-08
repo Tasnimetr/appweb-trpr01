@@ -1,15 +1,16 @@
 <script setup lang="ts">
-import ProductTable from './components/ProductTable.vue'
-import ProductForm from './components/ProductForm.vue'
+import ProductTable from './components/FlowerTable.vue'
+import ProductForm from './components/FlowerForm.vue'
 import EditForm from './components/EditForm.vue'
 import DuplicateForm from './components/DuplicateForm.vue';
-import { editedProduct, duplicatedProduct } from './products';
+import { editedFlower, duplicatedFlower } from './flowers';
 
 </script>
 
 <template>
   <div class="container1">
     <img src="./assets/logo.jpg" alt="logo" />
+    <!--1 flower bouquet-->
     <h1>Fleuriste Ste-foy</h1>
   </div>
 
@@ -19,8 +20,8 @@ import { editedProduct, duplicatedProduct } from './products';
     </div>
 
     <div class="right">
-      <EditForm v-if="editedProduct" />
-      <DuplicateForm v-else-if="duplicatedProduct" />
+      <EditForm v-if="editedFlower" />
+      <DuplicateForm v-else-if="duplicatedFlower" />
       <ProductForm v-else />
     </div>
   </div>

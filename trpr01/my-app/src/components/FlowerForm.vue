@@ -1,16 +1,16 @@
 <script setup lang="ts">
 import { reactive } from 'vue'
-import { products } from '../products'
-import type { Product  } from '../products'
+import { flowers } from '../flowers'
+import type { Flower  } from '../flowers'
 
-interface ProductForm {
+interface FlowerForm {
     name: string
     price: string
     description: string
     stock: string
 }
 
-const form = reactive<ProductForm>({
+const form = reactive<FlowerForm>({
     name: '',
     price: '',
     description: '',
@@ -23,7 +23,7 @@ const errors = reactive({
     stock: ''
 })
 
-function createProduct(): Product {
+function createFlower(): Flower {
     return {
         //source: AppWebGPT (prompt->comment générer un id unique en TypeScript)
         id: crypto.randomUUID(),
@@ -36,26 +36,26 @@ function createProduct(): Product {
 
 function submit(): void {
     if (form.name.trim().length < 3) {
-        errors.name = 'Le nom du produit doit être de minimum 3 caractères.'
+        errors.name = 'Le nom de la fleur doit être de minimum 3 caractères.'
         return
     } else {
         errors.name = ''
     }
     if (Number(form.price) < 0) {
-        errors.price = 'Le prix du produit doit être un nombre valide'
+        errors.price = 'Le prix de la fleur doit être un nombre valide'
         return
     } else {
         errors.price = ''
     }
     if (Number(form.stock) < 0) {
-        errors.stock = 'Le stock du produit doit être un nombre entier'
+        errors.stock = 'Le stock de la fleur doit être un nombre entier'
         return
     } else {
         errors.stock = ''
     }
     errors.name = ''
-    const product = createProduct()
-    products.value.push(product)
+    const flower = createFlower()
+    flowers.value.push(flower)
     resetForm()
 }
 

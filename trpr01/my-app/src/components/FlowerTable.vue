@@ -1,38 +1,38 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import type { Product } from '../products'
-import { products, editedProduct, duplicatedProduct } from '../products'
+import type { Flower } from '../flowers'
+import { flowers, editedFlower, duplicatedFlower } from '../flowers'
 
 const displayDeletionConfirmation = ref(false);
 let input = ref("");
 
-function editProduct(product: Product): void {
-    if (duplicatedProduct.value) {
-        duplicatedProduct.value = null;
+function editFlower(flower: Flower): void {
+    if (duplicatedFlower.value) {
+        duplicatedFlower.value = null;
     }
-    editedProduct.value = product
-    console.log('Produit à modifier->', product)
+    editedFlower.value = flower
+    console.log('Fleur à modifier->', flower)
 }
 
-function duplicateProduct(product: Product): void {
-    if (editedProduct.value) {
-        editedProduct.value = null;
+function duplicateFlower(flower: Flower): void {
+    if (editedFlower.value) {
+        editedFlower.value = null;
     }
-    duplicatedProduct.value = product
-    console.log('Produit à dupliquer->', product);
+    duplicatedFlower.value = flower
+    console.log('Fleur à dupliquer->', flower);
 }
 
-function deleteProduct(product: Product): void {
-    products.value.splice(products.value.indexOf(product), 1);
-    console.log('Produit à supprimer->', product);
+function deleteFlower(flower: Flower): void {
+    flowers.value.splice(flowers.value.indexOf(flower), 1);
+    console.log('Fleur à supprimer->', flower);
     displayDeletionConfirmation.value = true;
 }
 
 
 //source pour la barre de recherche: https://blog.logrocket.com/create-search-bar-vue/
 function filteredList() {
-    return products.value.filter((product) =>
-        product.name.toLowerCase().includes(input.value.toLowerCase())
+    return flowers.value.filter((flower) =>
+        flower.name.toLowerCase().includes(input.value.toLowerCase())
     );
 }
 </script>
@@ -43,7 +43,7 @@ function filteredList() {
         <div>
             <div class="accordion accordion-flush" id="accordionFlushExample">
                 <input type="text" v-model="input" placeholder="Rechercher une fleur..." />
-                <div class="item product" v-for="(product, id) in filteredList()" :key="product.name">
+                <div class="item product" v-for="(flower, id) in filteredList()" :key="flower.name">
                     <td>
                         <!--source exemple accordéon: https://getbootstrap.com/docs/5.0/components/accordion/-->
                         <div class="accordion-item">
@@ -51,23 +51,23 @@ function filteredList() {
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     :data-bs-target="'#flush-collapse' + id" aria-expanded="false"
                                     :aria-controls="'flush-collapse' + id">
-                                    {{ product.name }}
+                                    {{ flower.name }}
                                 </button>
                             </h2>
                             <div :id="'flush-collapse' + id" class="accordion-collapse collapse"
                                 :aria-labelledby="'flush-heading' + id" data-bs-parent="#accordionFlushExample">
                                 <div class="accordion-body">
-                                    <p>Description: {{ product.description }}</p>
-                                    <p>Prix: {{ product.price }}$</p>
-                                    <div v-if="product.stock <= 3" class="text-danger">
-                                        <p>Stock: {{ product.stock }}</p>
-                                        <p v-if="product.stock === 0">En rupture de stock!</p>
+                                    <p>Description: {{ flower.description }}</p>
+                                    <p>Prix: {{ flower.price }}$</p>
+                                    <div v-if="flower.stock <= 3" class="text-danger">
+                                        <p>Stock: {{ flower.stock }}</p>
+                                        <p v-if="flower.stock === 0">En rupture de stock!</p>
                                         <p v-else>Stock critique</p>
                                     </div>
-                                    <p v-else class="text-success">Stock: {{ product.stock }}</p>
-                                    <button @click="editProduct(product)">Modifier</button>
-                                    <button @click="duplicateProduct(product)">Dupliquer</button>
-                                    <button @click="deleteProduct(product)">Supprimer</button>
+                                    <p v-else class="text-success">Stock: {{ flower.stock }}</p>
+                                    <button @click="editFlower(flower)">Modifier</button>
+                                    <button @click="duplicateFlower(flower)">Dupliquer</button>
+                                    <button @click="deleteFlower(flower)">Supprimer</button>
                                 </div>
                             </div>
                         </div>

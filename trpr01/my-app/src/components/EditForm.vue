@@ -1,20 +1,20 @@
 <script setup lang="ts">
-import { editedProduct } from '../products'
+import { editedFlower } from '../flowers'
 
 function submit(): void {
     //revenir à ProductForm
-    editedProduct.value = null
+    editedFlower.value = null
 }
 </script>
 <template>
-    <div v-if="editedProduct">
+    <div v-if="editedFlower">
     <h1>Modifier un bouquet</h1>
 
     <form @submit.prevent="submit">
-        <input v-model="editedProduct.name" required />
-        <input v-model="editedProduct.price" type="number" required />
-        <textarea v-model="editedProduct.description"  required></textarea>
-        <input v-model="editedProduct.stock" type="number" required />
+        <input v-model="editedFlower.name" required />
+        <input v-model="editedFlower.price" type="number" required />
+        <textarea v-model="editedFlower.description"  required></textarea>
+        <input v-model="editedFlower.stock" type="number" required />
         <button type="submit">Modifier</button>
     </form>
     </div>
