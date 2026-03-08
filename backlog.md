@@ -57,6 +57,6 @@
 |  B6 |  SHOULD  |   ✅   | refactorisation nom produit  || Renommer var produit par le produit concret de mon application |        |
 |  A18|   MUST   |   ✅   | Affichage quantités |    8    | Affichage en temps réel des quantités avec indicateur visuel (plus en stock -> rouge)|        | 
 |  A19|   MUST   |   ✅   | Avertissement rupture stock |9| Texte colorié s'affiche si produit atteint stock critique (>=3) |        | 
-|  A20|   MUST   |   🟦   | Bouton téléchargement CSV | 10| Nouveau bouton "Exporter" dans la page d'affichage des produits |        | 
-|  A21|   MUST   |   🟦   | Exporter UI liste en CSV | 10 | UI liste produits se télécharge en format CSV |    qu'est-ce que CSV et comment ça marche?    | 
+|  A20|   MUST   |   ✅   | Bouton téléchargement CSV | 10| Nouveau bouton "Exporter" dans la page d'affichage des produits |        | 
+|  A21|   MUST   |   ✅   | Exporter UI liste en CSV | 10 | UI liste produits se télécharge en format CSV |    qu'est-ce que CSV et comment ça marche?    | 
 |  A22|   MUST   |   ✅   | Seed Liste produits |    5    | Seed produits dans la liste des produits |  J'aurais dû penser à ça dès le départ pour vérifier l'affichage des produits dans Tableau sans ajout à chaque fois   |
