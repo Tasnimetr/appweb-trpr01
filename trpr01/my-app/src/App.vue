@@ -3,7 +3,8 @@ import ProductTable from './components/FlowerTable.vue'
 import ProductForm from './components/FlowerForm.vue'
 import EditForm from './components/EditForm.vue'
 import DuplicateForm from './components/DuplicateForm.vue';
-import { editedFlower, duplicatedFlower } from './flowers';
+import ExportButton from './services/ExportButton.vue';
+import { editedFlower, duplicatedFlower } from './products';
 
 </script>
 
@@ -25,6 +26,7 @@ import { editedFlower, duplicatedFlower } from './flowers';
       <ProductForm v-else />
     </div>
   </div>
+  <ExportButton />
 </template>
 
 <style scoped>

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import type { Flower } from '../flowers'
-import { flowers, editedFlower, duplicatedFlower } from '../flowers'
+import type { Flower } from '../products'
+import { flowers, editedFlower, duplicatedFlower } from '../products'
 
 const displayDeletionConfirmation = ref(false);
 let input = ref("");

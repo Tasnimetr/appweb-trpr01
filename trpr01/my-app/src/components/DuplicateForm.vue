@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { flowers } from '../flowers'
-import { duplicatedFlower} from '../flowers'
+import { flowers } from '../products'
+import { duplicatedFlower} from '../products'
 
 function submit(): void {
     //revenir à ProductForm

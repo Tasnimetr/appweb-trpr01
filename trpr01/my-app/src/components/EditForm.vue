@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { editedFlower } from '../flowers'
+import { editedFlower } from '../products'
 
 function submit(): void {
     //revenir à ProductForm

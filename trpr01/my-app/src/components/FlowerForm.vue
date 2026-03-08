@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { reactive } from 'vue'
-import { flowers } from '../flowers'
-import type { Flower  } from '../flowers'
+import { flowers } from '../products'
+import type { Flower  } from '../products'
 
 interface FlowerForm {
     name: string
