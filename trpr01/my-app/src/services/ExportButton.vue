@@ -4,6 +4,7 @@ import { flowers } from '../products'
 //source: https://coreui.io/answers/how-to-export-data-to-csv-in-vue/
 function exportFlowersListCSV(): void {
 
+    //source: AppWebGPT
     const headers = ["id", "nom", "prix", "description", "stock"].join(',')
 
     const rows = flowers.value.map(row =>

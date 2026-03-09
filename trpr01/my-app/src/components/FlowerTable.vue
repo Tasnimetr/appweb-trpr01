@@ -2,6 +2,7 @@
 import { ref } from "vue";
 import type { Flower } from '../products'
 import { flowers, editedFlower, duplicatedFlower } from '../products'
+import SearchBar from "./SearchBar.vue";
 
 const displayDeletionConfirmation = ref(false);
 let input = ref("");
@@ -42,7 +43,7 @@ function filteredList() {
     <table>
         <div>
             <div class="accordion accordion-flush" id="accordionFlushExample">
-                <input type="text" v-model="input" placeholder="Rechercher une fleur..." />
+                <SearchBar v-model="input" />
                 <div class="item product" v-for="(flower, id) in filteredList()" :key="flower.name">
                     <td>
                         <!--source exemple accordéon: https://getbootstrap.com/docs/5.0/components/accordion/-->

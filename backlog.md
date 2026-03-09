@@ -53,7 +53,7 @@
 |  B5 |  SHOULD  |   ✅   | Résultat recherche claire | 6 | un message apparaît si aucun résultat|        |
 |  A16|   MUST   |   ✅   | Détails produits |     7      | Champs détails-> nom, description, prix et stock |  Afficher des détails sous forme d'accordéon      |
 |  B3 |  SHOULD  |   ✅   | Accordéon collapse |     7    | Détail d'un produit collapse quand un autre produit est cliqué |   Trouver solution comment donner des ids différents pour ne pas qu'ils s'ouvrent tous |
-|  A17|   MUST   |   ⬜   | Découpage application parties|| Faire le découpage de l'application en composants, en autans que de parties fonctionelles |        |
+|  A17|   MUST   |   🟦   | Découpage application parties|| Faire le découpage de l'application en composants, en autans que de parties fonctionelles |        |
 |  B6 |  SHOULD  |   ✅   | refactorisation nom produit  || Renommer var produit par le produit concret de mon application |        |
 |  A18|   MUST   |   ✅   | Affichage quantités |    8    | Affichage en temps réel des quantités avec indicateur visuel (plus en stock -> rouge)|        | 
 |  A19|   MUST   |   ✅   | Avertissement rupture stock |9| Texte colorié s'affiche si produit atteint stock critique (>=3) |        | 
