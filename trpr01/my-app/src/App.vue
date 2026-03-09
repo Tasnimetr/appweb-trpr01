@@ -40,7 +40,7 @@ import { editedFlower, duplicatedFlower } from './products';
 }
 
 .container1>img {
-  height: 50px;
+  height: 75px;
   width: auto;
 }
 
