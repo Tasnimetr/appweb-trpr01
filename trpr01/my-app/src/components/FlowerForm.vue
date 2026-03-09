@@ -91,7 +91,7 @@ function resetForm(): void {
         <input v-model="form.stock" type="number" placeholder="Stock" required />
         <p v-if="errors.stock" class="text-danger">{{ errors.stock }}</p>
 
-        <button type="submit">Ajouter</button>
+        <button type="submit" class="btn btn-dark">Ajouter</button>
     </form>
 </template>
 

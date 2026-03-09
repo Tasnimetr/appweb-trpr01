@@ -27,7 +27,7 @@ function exportFlowersListCSV(): void {
 </script>
 <template>
 
-    <button @click="exportFlowersListCSV">
+    <button @click="exportFlowersListCSV" class="btn btn-dark">
         Exporter
     </button>
 </template>

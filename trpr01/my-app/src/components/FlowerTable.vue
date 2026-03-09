@@ -5,7 +5,7 @@ import { flowers, editedFlower, duplicatedFlower } from '../products'
 import SearchBar from "./SearchBar.vue";
 
 const displayDeletionConfirmation = ref(false);
-const deletionConfirmation = "Supression Réussie"
+const deletionConfirmation = "Suppression Réussie"
 let input = ref("");
 
 function editFlower(flower: Flower): void {
@@ -67,9 +67,10 @@ function filteredList() {
                                         <p v-else>Stock critique</p>
                                     </div>
                                     <p v-else class="text-success">Stock: {{ flower.stock }}</p>
-                                    <button @click="editFlower(flower)">Modifier</button>
-                                    <button @click="duplicateFlower(flower)">Dupliquer</button>
-                                    <button @click="deleteFlower(flower)">Supprimer</button>
+                                    <!--Zone administative en noir et supression en rouge-->
+                                    <button @click="editFlower(flower)" class="btn btn-dark">Modifier</button>
+                                    <button @click="duplicateFlower(flower)" class="btn btn-dark">Dupliquer</button>
+                                    <button @click="deleteFlower(flower)" class="btn btn-danger">Supprimer</button>
                                 </div>
                             </div>
                         </div>
@@ -81,12 +82,12 @@ function filteredList() {
             </div>
         </div>
     </table>
+    <!--source: https://www.w3schools.com/tags/tag_dialog.asp-->
     <dialog class="alert alert-success" v-if="displayDeletionConfirmation" open>
-        <!--source: https://www.w3schools.com/tags/tag_dialog.asp-->
         {{ deletionConfirmation }}
         <form method="dialog">
+             <!--source: AppWebGpt pour comrpendre comment fermer dialogue(comment fermer un dialogue avec un bouton)-->
             <button @click="displayDeletionConfirmation = false">X</button>
-            <!--source: AppWebGpt pour comrpendre comment fermer dialogue(comment fermer un dialogue avec un bouton)-->
         </form>
     </dialog>
 </template>
