@@ -4,7 +4,7 @@
 > **Travail :** TP01 - Gestionnaire de produits  
 > **Étudiant(e) :** {{ Tasnime Trabelsi }} 
 > **Repo GitHub :** {{ https://github.com/Tasnimetr/appweb-trpr01.git }}
-> **Déploiement (GitHub Pages) :** {{ URL du site }} 
+> **Déploiement (GitHub Pages) :** {{ https://tasnimetr.github.io/appweb-trpr01/ }} 
 
 ---
 **IMPORTANT**: renommer README.md
@@ -24,7 +24,13 @@ Décrire en 5–10 lignes l’application réalisée :
 - [ ] {{ Affichage des types de bouquet de fleurs }}
 - [ ] {{ Formulaire d'ajout de fleurs }}
 - [ ] {{ Consulter détails bouquets }}
-- [ ] {{ Consulter détails bouquets }}
+- [ ] {{ Formulaire de duplication de la fleur }}
+- [ ] {{ Bouton suppression de la fleur }}
+- [ ] {{ Barre de recherche fleur par nom }}
+- [ ] {{ Affichage des quantités disponibles pour chaque fleur }}
+- [ ] {{ Avertissement clair quand produit en quantité critique }}
+- [ ] {{ exportation liste produits en CSV }}
+
 
 > Ajouter ici toute fonctionnalité optionnelle (ex. catégorie, actif, date de création, etc.).
 
@@ -37,6 +43,7 @@ Décrire en 5–10 lignes l’application réalisée :
 - {{ https://www.w3schools.com/ }}
 - {{ https://chatgpt.com/ }}
 - {{ Copilot inligne suggetions }}
+- {{ AppWebGpt }}
 
 ---
 
@@ -47,19 +54,19 @@ Décrire en 5–10 lignes l’application réalisée :
 
 ### Installation
 ```bash
-{{ À compléter }}
+{{ npm install }}
 ````
 
 ### Démarrage en dev
 
 ```bash
-{{ À compléter }}
+{{ npm run dev }}
 ```
 
 ### Build
 
 ```bash
-{{ À compléter }}
+{{ npm run build }}
 ```
 
 ---
@@ -67,14 +74,17 @@ Décrire en 5–10 lignes l’application réalisée :
 ## 5) Déploiement (GitHub Pages)
 
 - **Nom du repo / dossier GitHub Pages :** `appweb-trpr01`
-- **URL attendue :** {{ `https://<user>.github.io/appweb-trpr01/` }}
+- **URL attendue :** {{ `https://<user>.github.io/appweb-trpr01/` }} -> https://tasnimetr.github.io/appweb-trpr01/
     
 
 ### Notes de configuration
 
 - base URL (`base`) de Vite ajustée pour GitHub Pages
+   base : "/appweb-trpr01/"
 - commandes utilisées pour déployer (si script)
-    
+   git add .
+   git commit -m "Ajout du workflow"
+   git push
 
 ---
 
@@ -85,8 +95,10 @@ Décrire la structure du projet et les responsabilités.
 ### Structure des dossiers
 
 - `src/components/` : composants UI (responsabilité unique)
+						Table affichage fleurs, formulaire d'ajout, formulaire de modification, formulaire de duplication, barre de recherche et preview du stock
 - `src/models/` : types/interfaces TypeScript (ex. `Product`)
 - `src/services/` : logique utilitaire (export CSV)
+						Bouton et logique d'exportation
 - `src/assets/` : images (le logo)
 - `src/css/` : style css
     
@@ -96,11 +108,12 @@ Décrire la structure du projet et les responsabilités.
 
 ### Composants clés
 
-- `ProductTable` : Affichage sous forme de tableau avec affichage conditionnel
-- `ProductForm` : Formulaire qui permet d'ajouter des produits avec validation.
-- `DetailsForm` : Affichage des détails d'un produit sous forme d'accordéon. (à implémenter séparément de ProductTable?)
-- `EditForm` : Formulaire généré quand bouton modification d'un produit est cliqué et qui permet de modifier les données de ce produit.
-- `DuplicateForm` : Formulaire généré quand bouton duplication d'un produit est cliqué et qui permet de dupliquer les données de ce produit. (à venir)
+- `FlowerTable` : Affichage fleurs sous forme de tableau avec affichage conditionnel
+- `FlowerForm` : Formulaire qui permet d'ajouter des fleurs avec validation (affiche les détails de ses fleurs sous format d'accordéon).
+- `EditForm` : Formulaire généré quand bouton modification d'une fleur est cliqué et qui permet de modifier les données de cette fleur.
+- `DuplicateForm` : Formulaire généré quand bouton duplication d'une fleur est cliqué et qui permet de dupliquer les données de cette fleur.
+- `SearchBar` : Barre de recherche qui filtre la liste des fleurs par le nom.
+- `StockPreview` : Notifie l'utilisateur des fleurs qui sont en quantité critique.
 ...
 
 ---
@@ -127,24 +140,43 @@ Décrire concrètement :
 - suggestions UI/CSS -> copilot inligne suggetions (marqué quand ça fait plus qu'autocompléter ce que je voulais écrire donc quand ça me donne une nouvelle idée)
 - Ça m'est arrivé une fois dans product.ts quand je voulais corriger la valeur de retour du editedProduct qui est de base initialisé à null. 
 - Copilot m'a suggéré d'ajouter la possibilité de null à Product vu que en effet le retour pouvait être l'un ou l'autre.
+- J'ai aussi énormément bloqué sur la validation du prix, je ne savais pas comment vérifier que l'input n'a pas plus de 2 décimales mais le chatgpt du cours
+- a pu m'expliquer l'utilisation de l'expression régulière pour valider.
 
 ### À quel endroit
-ProductForm
+FlowerForm.vue
 product.ts
+FlowerTable.vue
+ExportButton.vue
 
-#### ProductForm
+#### FlowerForm.vue
 
 - Ligne 29: pour générer un id unique
 - Ligne 13 à 18: code ne provient pas de AppWebGPT mais je m'en suis servie pour comprendre comment les champs réactifs fonctionnent dans un formulaire.
+- Ligne 21: pour valider le prix avec une expression régulière.
 - Ligne 31: AppWebGPT pour aussi comprendre comment convertir la string input prix du formulaire en nombre. J'ai ensuite réutiliser mes nouvelles connaissances.
+
     
 #### product.ts
 
 - Ligne 19: je voulais corriger la valeur de retour du editedProduct qui est de base initialisé à null et Copilot
 inline suggestions m'a suggéré d'ajouter la possibilité de null à Product vu que en effet le retour pouvait être l'un ou l'autre.
 
+#### FlowerTable.vue
+
+- Ligne 90: pour comrpendre comment fermer dialogue avec un bouton
+
+#### ExportButton.vue
+
+- Ligne 8: je me suis servie du chatgpt du cours (AppWebGPT) pour comprendre la manière d'afficher les headers selon notre cours car la technique utilisée
+- dans le site qui m'a guidé pour le reste de la méthode d'exportation(https://coreui.io/answers/how-to-export-data-to-csv-in-vue/ est cité dans ExportButton.vue), ne marchait pas pour moi
+- côté headers. AppWebGPT m'a offert une alternative qui faisait beaucoup plus de sens pour moi.
+
+
 ### Exemples de prompts (2 à 5)
 
 1. “comme comment générer un id unique en TypeScript?”
 2. “comment aligner deux sections à côté en css?”
 3. “explique moi la logique des champs réactif d'un formulaire”
+4. “comment faire de la validation d'un nombre qui accepte 2 décimales en vue.js typescript”
+5. “comment fermer un dialogue avec un bouton”

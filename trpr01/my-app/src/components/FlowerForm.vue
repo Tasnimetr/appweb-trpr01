@@ -3,8 +3,6 @@ import { reactive, computed } from 'vue'
 import { flowers } from '../products'
 import type { Flower } from '../products'
 
-
-
 interface FlowerForm {
     name: string
     price: string
