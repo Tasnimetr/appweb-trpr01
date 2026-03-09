@@ -6,7 +6,7 @@ const input = defineModel()
     <input class="searchBar" type="text" v-model="input" placeholder="Rechercher une fleur..." />
 </template>
 
-<style>
+<style scoped>
 .searchBar {
     width: 175px;
 }

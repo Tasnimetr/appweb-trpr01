@@ -5,6 +5,7 @@ import { flowers, editedFlower, duplicatedFlower } from '../products'
 import SearchBar from "./SearchBar.vue";
 
 const displayDeletionConfirmation = ref(false);
+const deletionConfirmation = "Supression Réussie"
 let input = ref("");
 
 function editFlower(flower: Flower): void {
@@ -82,7 +83,7 @@ function filteredList() {
     </table>
     <dialog class="alert alert-success" v-if="displayDeletionConfirmation" open>
         <!--source: https://www.w3schools.com/tags/tag_dialog.asp-->
-        Supression Réussie
+        {{ deletionConfirmation }}
         <form method="dialog">
             <button @click="displayDeletionConfirmation = false">X</button>
             <!--source: AppWebGpt pour comrpendre comment fermer dialogue(comment fermer un dialogue avec un bouton)-->

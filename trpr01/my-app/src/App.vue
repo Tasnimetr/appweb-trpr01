@@ -4,6 +4,7 @@ import ProductForm from './components/FlowerForm.vue'
 import EditForm from './components/EditForm.vue'
 import DuplicateForm from './components/DuplicateForm.vue';
 import ExportButton from './services/ExportButton.vue';
+import StockPreview from './components/StockPreview.vue';
 import { editedFlower, duplicatedFlower } from './products';
 
 </script>
@@ -24,6 +25,7 @@ import { editedFlower, duplicatedFlower } from './products';
       <EditForm v-if="editedFlower" />
       <DuplicateForm v-else-if="duplicatedFlower" />
       <ProductForm v-else />
+      <StockPreview/>
     </div>
   </div>
   <ExportButton />
@@ -45,9 +47,6 @@ import { editedFlower, duplicatedFlower } from './products';
   filter: drop-shadow(0 0 2em #42b883aa);
 }
 
-div {
-  margin-bottom: 50px;
-}
 
 .container1 {
   display: flex;
@@ -65,12 +64,13 @@ div {
 .container2 {
   display: flex;
   width: 100%;
+  gap: 40px;
 }
 
 .left,
 .right {
   width: 50%;
-  padding: 100px;
+  padding: 40px;
 }
 
 /*.right {
