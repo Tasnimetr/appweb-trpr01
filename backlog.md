@@ -34,8 +34,8 @@
 |  A2 |   MUST   |   ✅   | Affichage produits |    5     | Tableau affiche nom produit, lien vers détails et options (boutons) | Rien encore à afficher dans le tableau, boutons créés plus tard |
 |  A3 |   MUST   |   ✅   | Formulaire ajout produit |  1 | Champs formulaire-> nom, description, prix et stock |            |
 |  A4 |   MUST   |   ✅   | Bouton ajout produit| 1       | Bouton "Ajouter" cliquable sous le formulaire |                 |
-|  A5 |   MUST   |   🟥   | Validation au clic bouton | 1 | Formulaire non envoyé si données manquantes | Faire une fonction qui calcule les nombres après la virgules pour vérifier prix?|
-|  A6 |   MUST   |   🟥   | Logique applicative |    1    | Produit **valide** ajouté par formulaire s'affiche dans la page d'affichage des produits | Implémenter validation et la tester |
+|  A5 |   MUST   |   ✅   | Validation au clic bouton | 1 | Formulaire non envoyé si données manquantes | Faire une fonction qui calcule les nombres après la virgules pour vérifier prix?|
+|  A6 |   MUST   |   ✅   | Logique applicative |    1    | Produit **valide** ajouté par formulaire s'affiche dans la page d'affichage des produits | Implémenter validation et la tester |
 |  B1 |  SHOULD  |   ✅   | Séparer form et table produit|| Séparer la section d'affichage produits et formulaire |   Lien vers autre page pour remplir formulaire?      |
 |  A7 |   MUST   |   ✅   | Bouton modification produit |2| Nouveau bouton "Modifier" cliquable pour chaque produit |    id devrait être inclu?    |
 |  A8 |   MUST   |   ✅   | Formulaire préremplit |   2   | Nouveau formulaire généré prérempli par les données du produit sélectionné |        |
@@ -53,10 +53,10 @@
 |  B5 |  SHOULD  |   ✅   | Résultat recherche claire | 6 | un message apparaît si aucun résultat|        |
 |  A16|   MUST   |   ✅   | Détails produits |     7      | Champs détails-> nom, description, prix et stock |  Afficher des détails sous forme d'accordéon      |
 |  B3 |  SHOULD  |   ✅   | Accordéon collapse |     7    | Détail d'un produit collapse quand un autre produit est cliqué |   Trouver solution comment donner des ids différents pour ne pas qu'ils s'ouvrent tous |
-|  A17|   MUST   |   🟦   | Découpage application parties|| Faire le découpage de l'application en composants, en autans que de parties fonctionelles |        |
+|  A17|   MUST   |   ✅   | Découpage application parties|| Faire le découpage de l'application en composants, en autans que de parties fonctionelles |        |
 |  B6 |  SHOULD  |   ✅   | refactorisation nom produit  || Renommer var produit par le produit concret de mon application |        |
 |  A18|   MUST   |   ✅   | Affichage quantités |    8    | Affichage en temps réel des quantités avec indicateur visuel (plus en stock -> rouge)|        | 
-|  A19|   MUST   |   ✅   | Avertissement rupture stock |9| Texte colorié s'affiche si produit atteint stock critique (>=3) |        | 
+|  A19|   MUST   |   ✅   | Avertissement rupture stock |9| Texte colorié s'affiche si produit atteint stock critique (<=3) |        | 
 |  A20|   MUST   |   ✅   | Bouton téléchargement CSV | 10| Nouveau bouton "Exporter" dans la page d'affichage des produits |        | 
 |  A21|   MUST   |   ✅   | Exporter UI liste en CSV | 10 | UI liste produits se télécharge en format CSV |    qu'est-ce que CSV et comment ça marche?    | 
 |  A22|   MUST   |   ✅   | Seed Liste produits |    5    | Seed produits dans la liste des produits |  J'aurais dû penser à ça dès le départ pour vérifier l'affichage des produits dans Tableau sans ajout à chaque fois   |

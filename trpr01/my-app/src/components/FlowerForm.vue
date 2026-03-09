@@ -1,7 +1,9 @@
 <script setup lang="ts">
-import { reactive } from 'vue'
+import { reactive, computed } from 'vue'
 import { flowers } from '../products'
-import type { Flower  } from '../products'
+import type { Flower } from '../products'
+
+
 
 interface FlowerForm {
     name: string
@@ -15,6 +17,12 @@ const form = reactive<FlowerForm>({
     price: '',
     description: '',
     stock: ''
+})
+
+//source utilisé: AppWebGPT(comment faire de la validation d'un nombre qui accepte 2 décimales en vue.js typescript)
+const priceValid = computed(() => {
+    const regex = /^\d+(\.\d{1,2})?$/
+    return regex.test(form.price) && Number(form.price) >= 0
 })
 
 const errors = reactive({
@@ -41,7 +49,7 @@ function submit(): void {
     } else {
         errors.name = ''
     }
-    if (Number(form.price) < 0) {
+    if (!priceValid.value || Number(form.price) < 0) {
         errors.price = 'Le prix de la fleur doit être un nombre valide'
         return
     } else {
@@ -74,11 +82,15 @@ function resetForm(): void {
     <form @submit.prevent="submit">
         <input v-model="form.name" placeholder="Nom" required />
         <p v-if="errors.name" class="text-danger">{{ errors.name }}</p>
-        <input v-model="form.price" type="number" placeholder="Prix" required />
+
+        <input v-model="form.price" type="text" placeholder="Prix" required />
         <p v-if="errors.price" class="text-danger">{{ errors.price }}</p>
+
         <textarea v-model="form.description" placeholder="Description" required></textarea>
+
         <input v-model="form.stock" type="number" placeholder="Stock" required />
         <p v-if="errors.stock" class="text-danger">{{ errors.stock }}</p>
+
         <button type="submit">Ajouter</button>
     </form>
 </template>
