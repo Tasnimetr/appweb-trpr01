@@ -86,8 +86,8 @@ Décrire la structure du projet et les responsabilités.
 
 - `src/components/` : composants UI (responsabilité unique)
 - `src/models/` : types/interfaces TypeScript (ex. `Product`)
-- `src/services/` : logique utilitaire (ex. export CSV)
-- `src/assets/` : images (comme le logo)
+- `src/services/` : logique utilitaire (export CSV)
+- `src/assets/` : images (le logo)
 - `src/css/` : style css
     
 

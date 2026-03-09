@@ -101,12 +101,12 @@ Créer le formulaire qui ajoute effectivement des produits à la table.
 - Cette séance, j'ai créer les deux autres boutons de duplication et de suppression.
 - J'ai surtout travaillé sur la logique applicative de la duplication de mon produit.
 - J'ai ajouté une méthode de duplication qui crée un nouvel produit avec les même données que l'original sauf pour l'id qui est généré au hasard.
-- Ensuite, j'ai écarté les boutons l'un des autres pour un meilleur apperçu.
-- Ainsi, visuellement la nouvelle duplication s'affichait mais quand on modifie l'une, ça ne modifie l'autre.
+- Ensuite, j'ai écarté les boutons l'un des autres. Je pense que ça permet un meilleur apperçu poru l'utilisateur.
+- Ainsi, visuellement la nouvelle duplication s'affichait mais quand on modifie l'une, ça modifie l'autre.
 - Grâce à quelques tests avec la console, j'ai pu trouver la cause et la régler. C'était une erreur de référence.
 - Après m'être assuré que la modification d'un dupliqué ne modifie pas aussi l'original, J'ai fait en sorte que le switch entre les formulaires soit simple
-- et qu'un utilisateur ne soit pas obligé de soumettre un formulaire pour passer à un autre, s'il change d'avis.
-- J'ai aussi décidé de désactiver les champs du formulaire de duplication vu que l'option de modification existe pour tous.
+- et qu'un utilisateur ne soit pas obligé de soumettre un formulaire pour passer à un autre, s'il change d'avis(Par exemple, je veux modifier à la place de dupliquer).
+- J'ai aussi décidé de désactiver les champs du formulaire de duplication vu que l'option de modification existe déjà.
 
 **Difficultés / bugs**  
 - Comment séparer le nouveau produit de l'original à la duplication.
@@ -157,12 +157,12 @@ Créer le formulaire qui ajoute effectivement des produits à la table.
 ---
 
 ## Résumé global (à compléter avant remise)
-- **Ce dont je suis le plus fier/fière :** …
-- **Ce que j’améliorerais avec plus de temps :** la qualité du code
+- **Ce dont je suis le plus fier/fière :** Ce dont je suis la plus fière c'est la fonctionnalité de mon projet web. Toutes les fonctionnalités de l'interface fonctionnent comme un vrai site web en ligne.
+- **Ce que j’améliorerais avec plus de temps :** La qualité du code et le visuel.
 - **3 apprentissages techniques :**  
-  1) …  
-  2) …  
-  3) …
+  1) La première fois que je code une barre de recherche
+  2) Comment filtrer une liste en vue
+  3) Comment exporter une liste en CSV qui se télécharge
 
 ---
 
